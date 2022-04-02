@@ -6,11 +6,16 @@
   "author": "Starlong <starlong.lu@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "vitepress": "^0.22.3"
+    "chalk": "^4.1.1",
+    "vitepress": "^0.22.3",
+    "yorkie": "^2.0.0"
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs"
+  },
+  "gitHooks": {
+    "commit-msg": "node scripts/verifyCommit.js"
   }
 }
