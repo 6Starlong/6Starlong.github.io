@@ -11,6 +11,8 @@
     "conventional-changelog-cli": "^2.2.2",
     "enquirer": "^2.3.6",
     "execa": "^5.0.0",
+    "lint-staged": "^12.3.7",
+    "prettier": "^2.6.1",
     "semver": "^7.3.5",
     "vitepress": "^0.22.3",
     "yorkie": "^2.0.0"
@@ -26,6 +28,12 @@
     "node": ">=14.0.0"
   },
   "gitHooks": {
+    "pre-commit": "lint-staged",
     "commit-msg": "node scripts/verifyCommit.js"
+  },
+  "lint-staged": {
+    "*.{js,json,vue,md}": [
+      "prettier --write"
+    ]
   }
 }
