@@ -1,0 +1,17 @@
+/* .vitepress/theme/index.css */
+
+/* tailwindcss */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* vitepress-var */
+:root {
+  --dark-bg: #1f2021;
+}
+
+/* custom */
+body {
+  color: #eeece9;
+  background-color: var(--dark-bg);
+}
