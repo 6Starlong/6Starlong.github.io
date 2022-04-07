@@ -7,21 +7,21 @@
 Messages must be matched by the following regex:
 
 ```js
-/^(revert: )?(feat|fix|docs|style|refactor|perf|test|workflow|build|ci|chore|types|wip|release)(\(.+\))?: .{1,50}/;
+;/^(revert: )?(feat|fix|perf|docs|chore|style|refactor|test|workflow|build|ci|types|wip|release)(\(.+\))?: .{1,50}/
 ```
 
 ```
 feat: 新增功能
 fix: 修复bug
-docs: 修改文档
+perf: 代码优化
+docs: 更新文档
+chore: 杂项
 style: 修改代码风格
 refactor: 代码重构
-perf: 代码优化
 test: 测试用例
 workflow: 工作流程
 build: 构建打包
 ci: 集成依赖
-chore: 杂项
 types: 类型检查
 wip: 暂存代码
 release: 版本发布
