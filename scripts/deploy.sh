@@ -3,11 +3,14 @@
 # 确保脚本抛出遇到的错误
 set -e
 
+# 清除dist文件夹
+rm -rf .vitepress/dist
+
 # 生成静态文件
-yarn docs:build
+yarn build
 
 # 进入生成的文件夹
-cd docs/.vitepress/dist
+cd .vitepress/dist
 
 # 如果是发布到自定义域名
 # echo 'www.example.com' > CNAME
@@ -23,6 +26,6 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 
 
-git push -f https://github.com/6starlong/6starlong.github.io.git main:gh-pages
+git push -f https://github.com/6Starlong/6Starlong.github.io.git main:gh-pages
 
 cd -

@@ -53,14 +53,14 @@ async function main() {
   step('\nUpdating the package version...')
   updatePackage(targetVersion)
 
-  // Build the package. (已使用github的workflows自动化部署，此处无须打包)
+  // Build the package.
   // step('\nBuilding the package...');
-  // await run('yarn', ['docs:build']);
+  // await run('yarn', ['build']);
 
-  // Generate the changelog. TODO:集成prettier
+  // Generate the changelog.
   step('\nGenerating the changelog...')
   await run('yarn', ['changelog'])
-  // await run('yarn', ['prettier', '--write', 'CHANGELOG.md']);
+  await run('yarn', ['prettier', '--write', 'CHANGELOG.md'])
 
   const { yes: changelogOk } = await prompt({
     type: 'confirm',
@@ -76,7 +76,7 @@ async function main() {
   await run('git', ['commit', '-m', `release: v${targetVersion}`])
   await run('git', ['tag', `v${targetVersion}`])
 
-  // Publish the package. (暂无发布)
+  // Publish the package.
   // step('\nPublishing the package...');
   // await run('yarn', ['publish', '--ignore-scripts', '--no-git-checks']);
 
