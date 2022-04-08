@@ -5,13 +5,39 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/* vitepress-var */
-:root {
-  --dark-bg: #1f2021;
+/* fonts */
+@import './fonts.css';
+
+/* iconfont */
+.icon {
+  width: 3rem;
+  height: 3rem;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
 }
 
-/* custom */
+/* vitepress-root */
+:root {
+  --font-family-base: 'Quicksand', sans-serif;
+  --c-text-light-1: #e0deda;
+  --c-text-light-2: #c7c2bb;
+  --c-bark: #181818;
+  --c-bg: var(--c-bark);
+  --c-divider-dark: rgb(134, 126, 114);
+  --c-divider: var(--c-divider-dark);
+}
+
+/* custom style */
 body {
-  color: #eeece9;
-  background-color: var(--dark-bg);
+  font-synthesis: unset;
+}
+
+.theme .nav-bar {
+  border-bottom: none;
+  box-shadow: #000 0 0 8px;
+}
+
+.theme .nav-bar .logo {
+  height: 2rem;
 }
