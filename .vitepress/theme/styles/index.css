@@ -1,7 +1,7 @@
 /* .vitepress/theme/index.css */
 
 /* tailwindcss */
-@import 'tailwindcss/base';
+/* @import 'tailwindcss/base'; */
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
@@ -10,8 +10,8 @@
 
 /* iconfont */
 .icon {
-  width: 3rem;
-  height: 3rem;
+  width: 1rem;
+  height: 1rem;
   vertical-align: -0.15em;
   fill: currentColor;
   overflow: hidden;
@@ -28,7 +28,7 @@
   --c-divider: var(--c-divider-dark);
 }
 
-/* custom style */
+/* custom theme style */
 body {
   font-synthesis: unset;
 }
@@ -40,4 +40,12 @@ body {
 
 .theme .nav-bar .logo {
   height: 2rem;
+}
+
+.theme .sidebar {
+  border-right: none;
+}
+
+.theme .container {
+  max-width: 75rem;
 }

@@ -2,12 +2,12 @@
   <div class="text-center">
     <div class="tracking-[0.25em]">I'm a Frontend Developer</div>
     <div class="my-8">
-      <a href="https://github.com/6Starlong" class="inline-block mx-5" target="_black">
+      <a href="https://github.com/6Starlong" class="inline-block mx-5 text-white" target="_black">
         <svg class="icon" aria-hidden="true">
           <use xlink:href="#icon-github"></use>
         </svg>
       </a>
-      <a href="/blog/" class="inline-block mx-5">
+      <a href="/frontend/" class="inline-block mx-5">
         <svg class="icon" aria-hidden="true">
           <use xlink:href="#icon-blog"></use>
         </svg>
@@ -20,8 +20,8 @@
 
 <style lang="postcss">
 .home {
-  @apply flex flex-col justify-center items-center;
-  height: 75vh;
+  @apply flex flex-col;
+  height: 100vh;
 }
 
 .home .home-hero {
@@ -37,12 +37,16 @@
   max-height: 200px;
 }
 
-.home .icon {
+.home .home-content .icon {
   width: 4em;
   height: 4em;
 }
 
+.home .home-content {
+  flex: 1;
+}
+
 .home .footer {
-  @apply fixed left-0 right-0 bottom-0;
+  width: 100%;
 }
 </style>
