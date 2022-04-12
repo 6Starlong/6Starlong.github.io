@@ -6,6 +6,7 @@
   "license": "MIT",
   "homepage": "https://6Starlong.github.io",
   "devDependencies": {
+    "@vue/theme": "^1.0.1",
     "autoprefixer": "^10.4.4",
     "chalk": "^4.1.1",
     "conventional-changelog-cli": "^2.2.2",
@@ -21,6 +22,7 @@
     "vitepress": "^0.22.3",
     "yorkie": "^2.0.0"
   },
+  "dependencies": {},
   "scripts": {
     "dev": "vitepress",
     "build": "vitepress build",
