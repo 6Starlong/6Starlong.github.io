@@ -55,14 +55,14 @@ export default defineConfig({
     nav,
     sidebar,
 
-    // TODO: 搜索
+    // algolia 搜索
     algolia: {
-      indexName: 'vuejs',
-      appId: 'ML0LEBN7FQ',
-      apiKey: 'f49cbd92a74532cc55cfbffa5e5a7d01',
-      searchParameters: {
-        facetFilters: ['version:v3']
-      }
+      indexName: 'vitepress',
+      appId: 'RW1NM5N1BT',
+      apiKey: '09722d8e15c686b4057e13ec2b7b0970'
+      // searchParameters: {
+      //   facetFilters: ['version:v3']
+      // }
     },
     // 社区链接
     socialLinks: [{ icon: 'github', link: 'https://github.com/6Starlong' }],
