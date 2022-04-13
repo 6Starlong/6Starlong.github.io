@@ -6,19 +6,30 @@ import baseConfig from './VPTheme/vitepress/config/baseConfig.js'
 const nav = [
   {
     text: '前端开发笔记',
-    link: '/frontend/',
-    activeMatch: `^/frontend/`
+    activeMatch: `^/frontend/`,
+    items: [
+      { text: 'Web', link: '/frontend/index' },
+      { text: 'Vue', link: '/frontend/vuejs/' },
+      { text: 'Node', link: '/frontend/nodejs/' },
+      { text: '其他', link: '/frontend/other/' }
+    ]
   },
   {
-    text: 'Playground',
-    link: 'https://sfc.vuejs.org'
+    text: '⭐ Stars',
+    link: '/stars/',
+    activeMatch: `^/stars/`
+  },
+  {
+    text: '关于',
+    link: '/about/custom-theme',
+    activeMatch: `^/about/`
   }
 ]
 
 const sidebar = {
   '/frontend/': [
     {
-      text: '前端开发笔记',
+      text: 'Web',
       items: [
         { text: 'JavaScript', link: '/frontend/javascript' },
         { text: 'Html', link: '/frontend/html' },
@@ -35,7 +46,25 @@ const sidebar = {
     },
     {
       text: '其他',
-      items: [{ text: 'Git 笔记', link: '/frontend/other/git' }]
+      items: [{ text: 'Git 笔记', link: '/frontend/other/' }]
+    }
+  ],
+  '/stars/': [
+    {
+      text: 'Stars',
+      items: [
+        { text: 'VsCode 编辑器', link: '/stars/vscode' },
+        { text: 'Windows 系统', link: '/stars/windows' },
+        { text: 'Chrome 拓展', link: '/stars/chrome' },
+        { text: '网站推荐', link: '/stars/website' },
+        { text: '应用程序', link: '/stars/app' }
+      ]
+    }
+  ],
+  '/about/': [
+    {
+      text: '关于',
+      items: [{ text: '本站主题', link: '/about/custom-theme' }]
     }
   ]
 }

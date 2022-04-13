@@ -22,7 +22,7 @@ const { theme, frontmatter } = useData()
         </a>
       </template>
       <template v-if="theme.nav">
-        <a :href="theme.nav[0].link" class="inline-block mx-5">
+        <a href="/frontend/" class="inline-block mx-5">
           <svg class="icon" aria-hidden="true">
             <use xlink:href="#icon-blog"></use>
           </svg>
