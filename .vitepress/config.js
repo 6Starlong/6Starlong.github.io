@@ -22,9 +22,20 @@ const sidebar = {
       items: [
         { text: 'JavaScript', link: '/frontend/javascript' },
         { text: 'Html', link: '/frontend/html' },
-        { text: 'Css', link: '/frontend/css' },
-        { text: 'Git', link: '/frontend/git' }
+        { text: 'Css', link: '/frontend/css' }
       ]
+    },
+    {
+      text: 'Vue',
+      items: [{ text: 'VitePress 踩坑笔记', link: '/frontend/vuejs/vitepress' }]
+    },
+    {
+      text: 'Node',
+      items: [{ text: '生成日志（Changelog ）', link: '/frontend/nodejs/changelog' }]
+    },
+    {
+      text: '其他',
+      items: [{ text: 'Git 笔记', link: '/frontend/other/git' }]
     }
   ]
 }
