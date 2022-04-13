@@ -1,3 +1,12 @@
+## [1.0.3](https://github.com/6Starlong/6Starlong.github.io/compare/v1.0.2...v1.0.3) (2022-04-13)
+
+### Features
+
+- 集成 tailwindcss & DefaultTheme ([46263f0](https://github.com/6Starlong/6Starlong.github.io/commit/46263f0b764f6517e76fdc8e74802b6411accf23))
+- add home page ([d5f71f0](https://github.com/6Starlong/6Starlong.github.io/commit/d5f71f0eadc2b404ed7f132d51e086b65d39a135))
+- basic nav config ([d14eab1](https://github.com/6Starlong/6Starlong.github.io/commit/d14eab10bd2d42b1a350d6ce683929530603167a))
+- Customize with @vue/theme ([3ca6f00](https://github.com/6Starlong/6Starlong.github.io/commit/3ca6f00076e1e0e93e39e2432cce1a283f4266d2))
+
 ## [1.0.2](https://github.com/6Starlong/6Starlong.github.io/compare/v1.0.1...v1.0.2) (2022-04-07)
 
 ### Features
