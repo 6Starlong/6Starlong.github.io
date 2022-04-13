@@ -14,19 +14,14 @@ const { theme, frontmatter } = useData()
     <h2 class="mt-3 mb-1 leading-snug text-[1.6em]">{{ frontmatter.heroText }}</h2>
     <p class="tracking-[0.25em]">{{ frontmatter.tagline }}</p>
     <div class="my-8 text-4xl">
-      <template v-if="theme.socialLinks">
-        <a :href="theme.socialLinks[0].link" target="_black" class="inline-block mx-5">
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-github"></use>
-          </svg>
-        </a>
-      </template>
-      <template v-if="theme.nav">
-        <a href="/frontend/" class="inline-block mx-5">
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-blog"></use>
-          </svg>
-        </a>
+      <template v-if="theme.homeLinks">
+        <template v-for="(item, index) in theme.homeLinks" :key="index">
+          <a :href="item.link" target="_black" class="inline-block mx-5">
+            <svg class="icon" aria-hidden="true">
+              <use :xlink:href="`#icon-${item.icon}`"></use>
+            </svg>
+          </a>
+        </template>
       </template>
     </div>
     <p class="leading-8 tracking-[9px]">******</p>

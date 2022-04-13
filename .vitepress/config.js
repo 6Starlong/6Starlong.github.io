@@ -103,6 +103,11 @@ export default defineConfig({
       //   facetFilters: ['version:v3']
       // }
     },
+    // 首页链接
+    homeLinks: [
+      { icon: 'github', link: 'https://github.com/6Starlong' },
+      { icon: 'blog', link: '/frontend/' }
+    ],
     // 社区链接
     socialLinks: [{ icon: 'github', link: 'https://github.com/6Starlong' }],
     // 底部信息
