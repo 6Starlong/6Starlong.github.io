@@ -61,7 +61,6 @@ export default defineConfig({
 
   themeConfig: {
     logo: '/avatar.png',
-    repo: '6Starlong/6Starlong.github.io',
 
     nav,
     sidebar,

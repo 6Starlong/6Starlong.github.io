@@ -2,6 +2,8 @@ import { VPTheme } from './../VPTheme'
 import { h } from 'vue'
 import './styles/index.css'
 
+import PlayAside from './components/PlayAside.vue'
+
 export default {
   ...VPTheme,
   Layout() {
@@ -14,6 +16,7 @@ export default {
       // 'aside-top': () => h('div', 'this could be huge'),
       // 'aside-mid': () => h('div', { style: { height: '300px' }}, 'Sponsors'),
       // 'aside-bottom': () => h('div', { style: { height: '300px' }}, 'Sponsors'),
+      'aside-mid': () => h(PlayAside)
     })
   }
 }

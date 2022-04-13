@@ -14,8 +14,8 @@ const { theme, frontmatter } = useData()
     <h2 class="mt-3 mb-1 leading-snug text-[1.6em]">{{ frontmatter.heroText }}</h2>
     <p class="tracking-[0.25em]">{{ frontmatter.tagline }}</p>
     <div class="my-8 text-4xl">
-      <template v-if="theme.repo">
-        <a :href="`https://github.com/${theme.repo}`" class="inline-block mx-5" target="_black">
+      <template v-if="theme.socialLinks">
+        <a :href="theme.socialLinks[0].link" target="_black" class="inline-block mx-5">
           <svg class="icon" aria-hidden="true">
             <use xlink:href="#icon-github"></use>
           </svg>

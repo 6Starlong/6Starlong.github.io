@@ -1,0 +1,36 @@
+<script setup lang="ts">
+const playground = [
+  { text: 'StackBlitz', link: 'https://stackblitz.com' },
+  { text: 'Playground', link: 'https://sfc.vuejs.org' },
+  { text: 'VueUse Playground', link: 'https://play.vueuse.org' },
+  { text: 'Vue on CodeSandbox', link: 'https://codesandbox.io/s/vue-3' },
+  { text: 'Vue on Codepen', link: 'https://codepen.io/pen/editor/vue' },
+  { text: 'Vue on Components.studio', link: 'https://app.components.studio/create/vue3' },
+  { text: 'Vue on WebComponents.dev', link: 'https://webcomponents.dev/create/cevue' },
+  { text: 'Vue + Vite on Repl.it', link: 'https://replit.com/@replit/VueJS' }
+]
+</script>
+
+<template>
+  <div class="play-aside">
+    <div class="mt-12 mb-1 text-[12px] font-bold">在线 Playground</div>
+    <a
+      :href="item.link"
+      class="block text-[13px] leading-[28px]"
+      v-for="(item, index) in playground"
+      :key="index"
+      target="_blank"
+      >{{ item.text }}</a
+    >
+  </div>
+</template>
+
+<style scoped>
+.play-aside a {
+  color: var(--vt-c-text-2);
+  transition: color 0.25s;
+}
+.play-aside a:hover {
+  color: var(--vt-c-text-1);
+}
+</style>
