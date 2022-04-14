@@ -30,16 +30,10 @@ const { theme, frontmatter } = useData()
 </template>
 
 <style scoped>
-@media (min-width: 960px) {
-  /* --vt-nav-height: 55px; */
-  #hero {
-    margin-top: -55px;
-  }
-}
-
+/* --vt-nav-height: 55px; */
 #hero {
   padding: 18vh 32px 96px;
-  min-height: 100vh;
+  min-height: calc(100vh - 55px);
   text-align: center;
   font-family: 'Quicksand', sans-serif;
 }

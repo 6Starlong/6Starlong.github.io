@@ -22,7 +22,7 @@ const playground = [
 </script>
 
 <template>
-  <div class="play-aside" v-if="show">
+  <div class="aside-mid" v-if="show">
     <div class="mt-12 mb-1 text-[12px] font-bold">在线 Playground</div>
     <a
       :href="item.link"
@@ -36,11 +36,11 @@ const playground = [
 </template>
 
 <style scoped>
-.play-aside a {
+.aside-mid a {
   color: var(--vt-c-text-2);
   transition: color 0.25s;
 }
-.play-aside a:hover {
+.aside-mid a:hover {
   color: var(--vt-c-text-1);
 }
 </style>

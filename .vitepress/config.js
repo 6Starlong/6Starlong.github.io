@@ -1,14 +1,13 @@
-import fs from 'fs'
 import path from 'path'
 import { defineConfig } from 'vitepress'
-import baseConfig from './VPTheme/vitepress/config/baseConfig.js'
+import baseConfig from '@vue/theme/config'
 
 const nav = [
   {
     text: '前端开发笔记',
     activeMatch: `^/frontend/`,
     items: [
-      { text: '开始', link: '/frontend/' },
+      { text: '基础', link: '/frontend/' },
       { text: 'Vue', link: '/frontend/vuejs/' },
       { text: 'Node', link: '/frontend/nodejs/' },
       { text: '其他', link: '/frontend/other/' }
@@ -30,7 +29,7 @@ const sidebar = {
   '/frontend/': [
     {
       text: '文档',
-      items: [{ text: '开始', link: '/frontend/' }]
+      items: [{ text: '基础', link: '/frontend/' }]
     },
     {
       text: 'Vue',

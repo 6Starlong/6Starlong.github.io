@@ -1,6 +1,5 @@
 ---
 page: true
-navbar: false
 heroText: My name is Sᴛᴀʀʟᴏɴɢ
 tagline: I'm a Frontend Developer
 ---
