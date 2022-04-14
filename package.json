@@ -25,13 +25,15 @@
     "tailwindcss": "^3.0.23",
     "vitepress": "^0.22.3",
     "vue": "^3.2.32",
-    "yorkie": "^2.0.0"
+    "yorkie": "^2.0.0",
+    "zhlint": "^0.5.3"
   },
   "scripts": {
     "dev": "vitepress",
     "build": "vitepress build",
     "serve": "vitepress serve",
     "lint": "eslint --ext .js,.vue .vitepress src",
+    "zhlint": "zhlint src/**/*.md",
     "format": "prettier --write .vitepress src",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "release": "node scripts/release.js",
@@ -45,6 +47,9 @@
     "commit-msg": "node scripts/verifyCommit.js"
   },
   "lint-staged": {
+    "*.md": [
+      "zhlint"
+    ],
     "*.{js,json,vue,md}": [
       "prettier --write"
     ],

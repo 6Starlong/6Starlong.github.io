@@ -38,7 +38,7 @@ git push origin main -f # 强制推送至远程分支
 git reset --hard HEAD^
 ```
 
-#### reset 还是 revert?
+#### reset 还是 revert？
 
 简单理解 reset 是用来重置代码到指定的 commit，revert 是还原代码到某次提交前的状态。<br/>
 
@@ -50,7 +50,7 @@ fc09cf9 # 第二次提交
 d14eab1 # 第一次提交
 ```
 
-执行 `git reset --hard d14eab1`，这个时候指向第一次修改 d14eab1 ，而 d14eab1 之后的代码包括 fc09cf9 和 45a4d42 的修改都会被删除。<br />
+执行 `git reset --hard d14eab1`，这个时候指向第一次修改 d14eab1，而 d14eab1 之后的代码包括 fc09cf9 和 45a4d42 的修改都会被删除。<br />
 
 如果是发现第二次修改有错误，想要恢复到第二次修改，并要保留第三次修改呢？使用 revert。<br />
 
@@ -68,4 +68,4 @@ fc09cf9 # 第二次提交
 d14eab1 # 第一次提交
 ```
 
-实际 Git 把第二次修改从提交记录中给剔除(还原)了，还保留了第三次修改，并且产生了新的 commit_id(9a0d7d5)。
+实际 Git 把第二次修改从提交记录中给剔除 (还原) 了，还保留了第三次修改，并且产生了新的 commit_id(9a0d7d5)。
