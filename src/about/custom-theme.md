@@ -3,6 +3,10 @@
 > 本站主题 Fork 自 [@vue/theme](https://github.com/vuejs/theme/)。该主题仅适用与 [Vue 官方文档](staging-cn.vuejs.org)，它不遵循 semver，并且可能包含特定于 Vue 文档的硬编码逻辑。<br/>
 > 这里对该主题的源文件进行了特定的修改以满足自定义需求。
 
+```
+pnpm add @vue/theme @docsearch/css @vueuse/core body-scroll-lock normalize.css -D
+```
+
 ## VPNavBar.vue
 
 > VPTheme/vitepress/components/VPNavBar.vue

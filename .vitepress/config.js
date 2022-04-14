@@ -8,7 +8,7 @@ const nav = [
     text: '前端开发笔记',
     activeMatch: `^/frontend/`,
     items: [
-      { text: 'Web', link: '/frontend/index' },
+      { text: '开始', link: '/frontend/' },
       { text: 'Vue', link: '/frontend/vuejs/' },
       { text: 'Node', link: '/frontend/nodejs/' },
       { text: '其他', link: '/frontend/other/' }
@@ -29,12 +29,8 @@ const nav = [
 const sidebar = {
   '/frontend/': [
     {
-      text: 'Web',
-      items: [
-        { text: 'JavaScript', link: '/frontend/javascript' },
-        { text: 'Html', link: '/frontend/html' },
-        { text: 'Css', link: '/frontend/css' }
-      ]
+      text: '文档',
+      items: [{ text: '开始', link: '/frontend/' }]
     },
     {
       text: 'Vue',
@@ -42,7 +38,10 @@ const sidebar = {
     },
     {
       text: 'Node',
-      items: [{ text: '生成日志（Changelog ）', link: '/frontend/nodejs/changelog' }]
+      items: [
+        { text: '包管理器', link: '/frontend/nodejs/' },
+        { text: '生成日志（Changelog ）', link: '/frontend/nodejs/changelog' }
+      ]
     },
     {
       text: '其他',
