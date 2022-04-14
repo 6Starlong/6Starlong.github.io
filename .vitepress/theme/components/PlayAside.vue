@@ -1,4 +1,14 @@
 <script setup lang="ts">
+import { ref, watch } from 'vue'
+import { useData, useRoute } from 'vitepress'
+
+const { theme } = useData()
+const route = useRoute()
+const link = theme.value.homeLinks.find((i) => i.default).link
+const show = ref(route.path.match(link))
+
+watch(route, () => (show.value = route.path.match(link)))
+
 const playground = [
   { text: 'StackBlitz', link: 'https://stackblitz.com' },
   { text: 'Playground', link: 'https://sfc.vuejs.org' },
@@ -12,7 +22,7 @@ const playground = [
 </script>
 
 <template>
-  <div class="play-aside">
+  <div class="play-aside" v-if="show">
     <div class="mt-12 mb-1 text-[12px] font-bold">在线 Playground</div>
     <a
       :href="item.link"
