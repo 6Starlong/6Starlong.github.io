@@ -32,10 +32,25 @@ const { theme, frontmatter } = useData()
 <style scoped>
 /* --vt-nav-height: 55px; */
 #hero {
+  position: relative;
+  z-index: 1;
   padding: 18vh 32px 96px;
   min-height: calc(100vh - 55px);
   text-align: center;
   font-family: 'Quicksand', sans-serif;
+}
+
+#hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /*放在内容背后*/
+  width: 100%;
+  height: 100%;
+  background: url('https://w.wallhaven.cc/full/6o/wallhaven-6ozkzl.jpg');
+  background-size: cover;
+  opacity: 0.5;
 }
 
 #hero h1 {

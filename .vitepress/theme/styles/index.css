@@ -20,3 +20,16 @@
 /* --vt :root */
 
 /* custom theme style */
+body::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(84, 84, 84, 0.48);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(84, 84, 84, 0.8);
+}
