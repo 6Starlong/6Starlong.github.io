@@ -1,3 +1,17 @@
+## [1.0.4](https://github.com/6Starlong/6Starlong.github.io/compare/v1.0.3...v1.0.4) (2022-04-22)
+
+### Features
+
+- 添加 homeLinks 配置首页链接 ([6c97298](https://github.com/6Starlong/6Starlong.github.io/commit/6c972983c7b730ab661358c7d3dc50cbeaf20dfc))
+- 添加 PlayAside 组件到 aside-mid ([5131327](https://github.com/6Starlong/6Starlong.github.io/commit/5131327cffc0b2e6e95ea8c5231dea25719ba729))
+- add zhlint fix ([0870d6a](https://github.com/6Starlong/6Starlong.github.io/commit/0870d6a6c27831cbbaa77a0863ffe90d8402cb43))
+
+### Performance Improvements
+
+- 添加主题 Layout 配置优化, 更新文档 ([8a33892](https://github.com/6Starlong/6Starlong.github.io/commit/8a338925bd18d86240d7c1fe8f0ac042ea982e62))
+- 修改自定义主题 @vue/theme ([cf0de59](https://github.com/6Starlong/6Starlong.github.io/commit/cf0de597ac5d4f81721e896ec1b39ea9ab691ad8))
+- yarn2pnpm ([1fc03ff](https://github.com/6Starlong/6Starlong.github.io/commit/1fc03ffde8c3f29556e6910dbeade01f30503906))
+
 ## [1.0.3](https://github.com/6Starlong/6Starlong.github.io/compare/v1.0.2...v1.0.3) (2022-04-13)
 
 ### Features
