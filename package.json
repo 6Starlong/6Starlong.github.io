@@ -44,9 +44,6 @@
     "commit-msg": "node scripts/verifyCommit.js"
   },
   "lint-staged": {
-    "*.md": [
-      "zhlint"
-    ],
     "*.{js,json,vue,md}": [
       "prettier --write"
     ],
