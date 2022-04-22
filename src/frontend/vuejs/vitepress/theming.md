@@ -150,7 +150,7 @@ export default {
 
 ## 使用 Vue 3 文档主题
 
-> 本站主题 Fork 自 [@vue/theme](https://github.com/vuejs/theme/)。该主题仅适用与 [Vue 官方文档](staging-cn.vuejs.org)，它不遵循 semver，并且可能包含特定于 Vue 文档的硬编码逻辑。<br/>
+> 本站主题 Fork 自 [@vue/theme](https://github.com/vuejs/theme/)。该主题仅适用与 [Vue 官方文档](https://staging-cn.vuejs.org)，它不遵循 semver，并且可能包含特定于 Vue 文档的硬编码逻辑。<br/>
 > 该主题不推荐直接使用，这里对该主题进行了部分修改以满足自定义需求。
 
 ### 使用方法
