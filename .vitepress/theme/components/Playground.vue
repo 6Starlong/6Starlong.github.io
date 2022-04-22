@@ -30,8 +30,8 @@ const playground = [
       :href="item.link"
       class="block text-[13px] leading-[28px]"
       target="_blank"
-      >{{ item.text }}</a
-    >
+      >{{ item.text }}
+    </a>
   </div>
 </template>
 
