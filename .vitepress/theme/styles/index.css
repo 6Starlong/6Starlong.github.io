@@ -19,12 +19,7 @@
 /* --vt :root */
 
 /* custom theme style */
-
-body {
-  font-synthesis: weight style small-caps;
-}
-
-/* 滑动渐变 */
+/* 渐变 */
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s ease;

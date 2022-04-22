@@ -21,12 +21,21 @@ module.exports = {
 
 - `no-undef`
 
-  - defineProps is not defined
-
 需要在 ESLint 配置文件中启用编译器宏环境
 
+require is not defined
+
 ```js
-// .eslintrc.js
+module.exports = {
+  env: {
+    node: true
+  }
+}
+```
+
+defineProps is not defined
+
+```js
 module.exports = {
   env: {
     'vue/setup-compiler-macros': true
@@ -36,8 +45,9 @@ module.exports = {
 
 - `vue/require-default-prop`
 
-  - Prop should define at least its type
-  - Prop requires default value to be set
+Prop should define at least its type
+
+Prop requires default value to be set
 
 需要在 props 中定义类型和默认值
 

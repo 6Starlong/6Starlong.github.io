@@ -29,3 +29,9 @@ onMounted(() => {
   app.mount(document.querySelector('.VPNavBarTitle'))
 })
 </script>
+
+<style scoped>
+.VPApp {
+  font-synthesis: weight style small-caps;
+}
+</style>
