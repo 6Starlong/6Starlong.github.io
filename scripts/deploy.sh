@@ -4,13 +4,13 @@
 set -e
 
 # 清除dist文件夹
-rm -rf .vitepress/dist
+rm -rf dist
 
 # 生成静态文件
-yarn build
+pnpm build
 
 # 进入生成的文件夹
-cd .vitepress/dist
+cd dist
 
 # 如果是发布到自定义域名
 # echo 'www.example.com' > CNAME

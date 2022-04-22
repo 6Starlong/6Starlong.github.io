@@ -5,7 +5,7 @@ tagline: I'm a Frontend Developer
 ---
 
 <script setup>
-import Home from '@theme/components/Home.vue'
+import ThemeHome from '@theme/components/ThemeHome.vue'
 </script>
 
-<Home />
+<ThemeHome />

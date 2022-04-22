@@ -3,10 +3,11 @@ module.exports = {
   env: {
     node: true,
     es2022: true,
-    browser: true
+    browser: true,
+    'vue/setup-compiler-macros': true
   },
   // 通用规则集
-  extends: ['plugin:vue/vue3-recommended', 'eslint:recommended'],
+  extends: ['plugin:vue/vue3-recommended', 'eslint:recommended', '@vue/eslint-config-prettier'],
   // 覆盖/新增规则
   rules: {
     // 'vue-unused-vars': 'error'

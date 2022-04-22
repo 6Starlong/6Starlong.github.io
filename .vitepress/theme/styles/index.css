@@ -1,7 +1,6 @@
 /* .vitepress/theme/index.css */
 
 /* tailwindcss */
-/* @import 'tailwindcss/base'; */
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
@@ -20,6 +19,23 @@
 /* --vt :root */
 
 /* custom theme style */
+
+body {
+  font-synthesis: weight style small-caps;
+}
+
+/* 滑动渐变 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* body 滚动条 */
 body::-webkit-scrollbar {
   width: 0.5rem;
   height: 0.5rem;

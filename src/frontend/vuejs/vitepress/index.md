@@ -1,5 +1,8 @@
 # VitePress
 
+- [文档](https://vitepress.vuejs.org/)
+- [Github](https://github.com/vuejs/vitepress)
+
 ## MarkDown 扩展
 
 输入

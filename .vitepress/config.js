@@ -10,6 +10,7 @@ const nav = [
       { text: '基础', link: '/frontend/' },
       { text: 'Vue', link: '/frontend/vuejs/' },
       { text: 'Node', link: '/frontend/nodejs/' },
+      { text: '构建部署', link: '/frontend/build-deploy/' },
       { text: '其他', link: '/frontend/other/' }
     ]
   },
@@ -20,7 +21,7 @@ const nav = [
   },
   {
     text: '关于',
-    link: '/about/custom-theme',
+    link: '/about/',
     activeMatch: `^/about/`
   }
 ]
@@ -33,7 +34,10 @@ const sidebar = {
     },
     {
       text: 'Vue',
-      items: [{ text: 'VitePress 踩坑笔记', link: '/frontend/vuejs/vitepress' }]
+      items: [
+        { text: 'VitePress 踩坑笔记', link: '/frontend/vuejs/vitepress/' },
+        { text: 'VitePress 主题化', link: '/frontend/vuejs/vitepress/theming' }
+      ]
     },
     {
       text: 'Node',
@@ -41,6 +45,10 @@ const sidebar = {
         { text: '包管理器', link: '/frontend/nodejs/' },
         { text: '生成日志（Changelog ）', link: '/frontend/nodejs/changelog' }
       ]
+    },
+    {
+      text: '构建部署',
+      items: [{ text: 'eslint', link: '/frontend/build-deploy/' }]
     },
     {
       text: '其他',
@@ -58,12 +66,6 @@ const sidebar = {
         { text: '应用程序', link: '/stars/app' }
       ]
     }
-  ],
-  '/about/': [
-    {
-      text: '关于',
-      items: [{ text: '本站主题', link: '/about/custom-theme' }]
-    }
   ]
 }
 
@@ -74,6 +76,7 @@ export default defineConfig({
   title: 'Sᴛᴀʀʟᴏɴɢ💫',
   description: '我们只能耸耸肩说“好吧”！',
   srcDir: 'src',
+  outDir: 'dist',
 
   // 从head引入
   head: [

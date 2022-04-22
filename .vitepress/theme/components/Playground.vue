@@ -22,13 +22,13 @@ const playground = [
 </script>
 
 <template>
-  <div class="aside-mid" v-if="show">
+  <div v-if="show" class="aside-mid">
     <div class="mt-12 mb-1 text-[12px] font-bold">在线 Playground</div>
     <a
-      :href="item.link"
-      class="block text-[13px] leading-[28px]"
       v-for="(item, index) in playground"
       :key="index"
+      :href="item.link"
+      class="block text-[13px] leading-[28px]"
       target="_blank"
       >{{ item.text }}</a
     >

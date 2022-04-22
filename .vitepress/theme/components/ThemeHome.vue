@@ -6,17 +6,19 @@ const { theme, frontmatter } = useData()
 <template>
   <div id="hero">
     <img
-      class="inline-block max-h-[200px]"
-      :src="frontmatter.heroImage || theme.logo"
       v-if="frontmatter.heroImage || theme.logo"
+      class="inline-block h-[200px]"
+      :src="frontmatter.heroImage || theme.logo"
     />
     <h1 class="mt-8 leading-none font-bold text-[4.5em]">Hello</h1>
-    <h2 class="mt-3 mb-1 leading-snug text-[1.6em]">{{ frontmatter.heroText }}</h2>
+    <h2 class="mt-3 mb-1 leading-snug text-[1.6em]">
+      {{ frontmatter.heroText }}
+    </h2>
     <p class="tracking-[0.25em]">{{ frontmatter.tagline }}</p>
     <div class="my-8 text-4xl">
       <template v-if="theme.homeLinks">
         <template v-for="(item, index) in theme.homeLinks" :key="index">
-          <a :href="item.link" target="_black" class="inline-block mx-5">
+          <a :href="item.link" class="inline-block mx-5" target="_black">
             <svg class="icon" aria-hidden="true">
               <use :xlink:href="`#icon-${item.icon}`"></use>
             </svg>
@@ -51,10 +53,6 @@ const { theme, frontmatter } = useData()
   background: url('https://w.wallhaven.cc/full/6o/wallhaven-6ozkzl.jpg');
   background-size: cover;
   opacity: 0.5;
-}
-
-#hero h1 {
-  font-synthesis: weight style small-caps;
 }
 
 #hero a:nth-of-type(2) {
