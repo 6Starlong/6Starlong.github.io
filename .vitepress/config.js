@@ -41,14 +41,16 @@ const sidebar = {
     },
     {
       text: 'Node',
-      items: [
-        { text: '包管理器', link: '/frontend/nodejs/' },
-        { text: '生成日志（Changelog ）', link: '/frontend/nodejs/changelog' }
-      ]
+      items: [{ text: '包管理器', link: '/frontend/nodejs/' }]
     },
     {
       text: '构建部署',
-      items: [{ text: 'eslint', link: '/frontend/build-deploy/' }]
+      items: [
+        { text: '代码提交规范化', link: '/frontend/build-deploy/git-hook' },
+        { text: 'verify-commit', link: '/frontend/build-deploy/verify-commit' },
+        { text: 'changelog 生成日志', link: '/frontend/build-deploy/changelog' },
+        { text: 'eslint 代码检查工具', link: '/frontend/build-deploy/eslint' }
+      ]
     },
     {
       text: '其他',
