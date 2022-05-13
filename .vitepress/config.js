@@ -122,6 +122,8 @@ export default defineConfig({
   markdown: {},
 
   vite: {
+    // 定义 public 目录
+    publicDir: path.resolve(__dirname, '../public'),
     // 设置vite目录别名
     resolve: {
       alias: {
