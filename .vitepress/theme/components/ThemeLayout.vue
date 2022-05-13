@@ -32,6 +32,9 @@ onMounted(() => {
     e === 'create-container' && (target.style.opacity = frontmatter.value.home ? 0 : 1)
   })
 
+  // 动态导入光标点击特效
+  import('@/lib/cursor-effects')
+
   // 禁用img标签的原生drag功能
   document.body.addEventListener('dragstart', (e) => {
     if (e.target.nodeName.toLowerCase() === 'img') {
