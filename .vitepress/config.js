@@ -1,3 +1,4 @@
+import fs from 'fs'
 import path from 'path'
 import { defineConfig } from 'vitepress'
 import baseConfig from '@vue/theme/config'
@@ -83,11 +84,15 @@ export default defineConfig({
   // 从head引入
   head: [
     [
-      // 阿里字体图标 https://www.iconfont.cn/
-      'script',
+      'script', // 阿里字体图标 https://www.iconfont.cn/
       {
         src: 'https://at.alicdn.com/t/font_2779014_a932u7n2hl.js?spm=a313x.7781069.1998910419.88&file=font_2779014_a932u7n2hl.js'
       }
+    ],
+    [
+      'script', // 光标点击特效 https://blog-static.cnblogs.com/files/axqa/cursor-effects.js
+      {},
+      fs.readFileSync(path.resolve(__dirname, './lib/cursor-effects.js'), 'utf8')
     ]
   ],
 

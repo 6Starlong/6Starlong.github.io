@@ -30,6 +30,11 @@
   opacity: 0;
 }
 
+body {
+  /* 鼠标样式 */
+  cursor: url('./Arrow.ico'), default;
+}
+
 /* body 滚动条 */
 body::-webkit-scrollbar {
   width: 0.5rem;
