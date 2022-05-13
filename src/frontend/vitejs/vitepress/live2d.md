@@ -17,7 +17,7 @@ L2Dwidget.init({
 })
 ```
 
-效果:
+效果：
 ![An Image](./images/live2d-widget-model-shizuku.png)
 
 ### 引入地址 {#live2d-import}
@@ -55,7 +55,7 @@ L2Dwidget.on('*', (name) => {
 
 在 `.vitepress/lib/live2d-widget` 目录下创建 `L2Dwidget.min.js` 和 `L2Dwidget.min.0.js` 两个文件，复制源码到这两个文件中。
 
-使用本地引用的方式加载 `L2Dwidget.min.js` ，通过修改去除源码中的打印及报错信息，并且可以避免文件丢失。模型通过 cdn 加载方便更换模型，本地引用模型文件需要放在 `public` 目录中，确保不会被转换。
+使用本地引用的方式加载 `L2Dwidget.min.js`，通过修改去除源码中的打印及报错信息，并且可以避免文件丢失。模型通过 cdn 加载方便更换模型，本地引用模型文件需要放在 `public` 目录中，确保不会被转换。
 
 ```js
 // .vitepress/config.js

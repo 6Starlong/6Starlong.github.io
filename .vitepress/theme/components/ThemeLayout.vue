@@ -17,6 +17,7 @@ onMounted(() => {
   // 挂载 NavBarTitle 组件
   const app = createApp(NavBarTitle, { logo: theme.value.logo, title: site.value.title })
   app.mount(document.querySelector('.VPNavBarTitle'))
+
   // 看板娘 初始化
   L2Dwidget.init({
     model: {
@@ -29,6 +30,13 @@ onMounted(() => {
   })
   L2Dwidget.on('*', (e, target) => {
     e === 'create-container' && (target.style.opacity = frontmatter.value.home ? 0 : 1)
+  })
+
+  // 禁用img标签的原生drag功能
+  document.body.addEventListener('dragstart', (e) => {
+    if (e.target.nodeName.toLowerCase() === 'img') {
+      e.preventDefault()
+    }
   })
 })
 </script>

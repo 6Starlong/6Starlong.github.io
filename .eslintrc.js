@@ -12,5 +12,8 @@ module.exports = {
   rules: {
     // 'vue-unused-vars': 'error'
     // 'no-console': 'warn'
+  },
+  globals: {
+    L2Dwidget: true
   }
 }

@@ -1,8 +1,8 @@
 # 代码提交规范 {#git-hook}
 
-使用 git 初始化的项目，会在项目根路径生成 .git 文件夹（默认隐藏），其中 hooks 目录下会生成一些钩子文件，如：`pre-commit.sample` 和 `pre-push.sample`，git hook 是每次执行 git 操作时都会运行的命令或脚本，去除 .sample 后缀使其生效。
+使用 git 初始化的项目，会在项目根路径生成 `.git` 文件夹 (默认隐藏)，其中 hooks 目录下会生成一些钩子文件，如：`pre-commit.sample` 和 `pre-push.sample`，git hook 是每次执行 git 操作时都会运行的命令或脚本，去除 `.sample` 后缀使其生效。
 
-通过修改钩子文件，可以执行一些规范化操作，如：代码风格检查，提交信息校验等。一般 .git 文件夹并不会被上传到代码仓库，所以在本地修改钩子文件并不可取，使用 `husky` 和 `yorkie` 等工具使管理 git 钩子更加简单。
+通过修改钩子文件，可以执行一些规范化操作，如：代码风格检查，提交信息校验等。一般 `.git` 文件夹并不会被上传到代码仓库，所以在本地修改钩子文件并不可取，使用 `husky` 和 `yorkie` 等工具使管理 git 钩子更加简单。
 
 ## yorkie
 
@@ -17,7 +17,7 @@
 ```
 
 ::: tip
-查看 .git/hooks 文件夹是否存在 pre-commit 文件确保其生效，commit-message 提交信息文件 .git/COMMIT_EDITMSG
+查看 `.git/hooks` 文件夹是否存在 pre-commit 文件确保其生效，commit-message 提交信息文件 `.git/COMMIT_EDITMSG`
 :::
 
 ## simple-git-hooks

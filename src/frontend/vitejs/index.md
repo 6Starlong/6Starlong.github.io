@@ -10,7 +10,7 @@
 
 ### 资源引入 {#asset-import}
 
-静态资源在生产构建后会被转换，行为类似于 Webpack 的 `file-loader` 。例如，开发时的 `/img.png` 文件在生产构建后会是 `/assets/img.2d8efhg.png` 。
+静态资源在生产构建后会被转换，行为类似于 Webpack 的 `file-loader`。例如，开发时的 `/img.png` 文件在生产构建后会是 `/assets/img.2d8efhg.png`。
 
 服务时引入一个静态资源会返回解析后的公共路径：
 
@@ -21,9 +21,9 @@ document.getElementById('hero-img').src = imgUrl
 
 - `url()` 在 CSS 中的引用、Vue SFC 模板中的资源引用都将自动转换为导入。
 
-- 常见的图像、媒体和字体文件类型被自动检测为资源。可以使用 `assetsInclude` [配置项](https://cn.vitejs.dev/config/#assetsinclude) 扩展内部列表。
+- 常见的图像、媒体和字体文件类型被自动检测为资源。可以使用 `assetsInclude` [配置项](https://cn.vitejs.dev/config/#assetsinclude)扩展内部列表。
 
-- 较小的资源体积小于 assetsInlineLimit [选项值](https://cn.vitejs.dev/config/#build-assetsinlinelimit) 则会被内联为 base64 data URL。
+- 较小的资源体积小于 assetsInlineLimit [选项值](https://cn.vitejs.dev/config/#build-assetsinlinelimit)则会被内联为 base64 data URL。
 
 ### 显式 URL 引入 {#url-import}
 
@@ -46,9 +46,9 @@ import shaderString from './shader.glsl?raw'
 
 该目录中的资源在开发时能直接通过 `/` 根路径访问到，并且打包时会被完整复制到目标目录的根目录下。`public/icon.png` 应该在源码中被引用为 `/icon.png`
 
-目录默认是 `<root>/public` ，但可以通过 publicDir [选项](https://cn.vitejs.dev/config/#publicdir) 来配置。
+目录默认是 `<root>/public`，但可以通过 publicDir [选项](https://cn.vitejs.dev/config/#publicdir)来配置。
 
-### new URL(url, import.meta.url)
+### new URL(url，import.meta.url)
 
 [import.meta.url](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/import.meta) 是一个 ESM 的原生功能，会暴露当前模块的 URL。
 在一个 JavaScript 模块中，通过相对路径我们就能得到一个被完整解析的静态资源 URL：
