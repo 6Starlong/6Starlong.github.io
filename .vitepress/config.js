@@ -12,7 +12,7 @@ const nav = [
       { text: 'Vue', link: '/frontend/vuejs/' },
       { text: 'Node', link: '/frontend/nodejs/' },
       { text: '构建部署', link: '/frontend/build-deploy/' },
-      { text: '其他', link: '/frontend/other/' }
+      { text: '其他', link: '/frontend/other/git.md' }
     ]
   },
   {
@@ -36,6 +36,7 @@ const sidebar = {
     {
       text: 'Vue',
       items: [
+        { text: 'Vite 笔记', link: '/frontend/vuejs/vite/' },
         { text: 'VitePress 笔记', link: '/frontend/vuejs/vitepress/' },
         { text: 'VitePress 主题化', link: '/frontend/vuejs/vitepress/theming' }
       ]
@@ -55,7 +56,10 @@ const sidebar = {
     },
     {
       text: '其他',
-      items: [{ text: 'Git 笔记', link: '/frontend/other/' }]
+      items: [
+        { text: 'Git 笔记', link: '/frontend/other/git.md' },
+        { text: 'VsCode', link: '/frontend/other/vscode.md' }
+      ]
     }
   ],
   '/stars/': [

@@ -4,6 +4,24 @@
 - [Github](https://github.com/vuejs/vitepress)
 - [VuePress](https://v2.vuepress.vuejs.org/zh/guide/)
 
+## 配置 {#config}
+
+### 配置文件 {#config-file}
+
+VitePress 站点的基本配置文件是 `.vitepress/config.js `，基础的配置文件是这样的：
+
+```js
+module.exports = {
+  lang: 'zh-CN',
+  title: 'Hello Vitepress',
+  description: '这是一个 Vitepress 站点'
+}
+```
+
+::: tip
+目前 VitePress 包含的所有配置可以查看 [config.ts](https://github.com/vuejs/vitepress/blob/main/src/node/config.ts)
+:::
+
 ## Markdown 扩展 {#markdown-extension}
 
 ### 目录 {#toc}
