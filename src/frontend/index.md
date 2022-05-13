@@ -1,4 +1,4 @@
-# 基础
+# 基础 {#base}
 
 [Web 开发技术](https://developer.mozilla.org/zh-CN/docs/Web/)
 

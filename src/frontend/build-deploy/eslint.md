@@ -1,6 +1,6 @@
 # eslint
 
-## 配置 eslint
+## 配置 eslint {#config-eslint}
 
 Vue 3 项目推荐配置
 

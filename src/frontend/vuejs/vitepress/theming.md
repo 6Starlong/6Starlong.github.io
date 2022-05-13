@@ -1,8 +1,8 @@
-# 配置主题
+# 配置主题 {#configure-the-theme}
 
 参考文档：https://vitepress.vuejs.org/guide/theming.html
 
-## 使用自定义主题
+## 使用自定义主题 {#use-custom-theme}
 
 可以通过添加文件 `.vitepress/theme/index.js` 来启用自定义主题
 
@@ -47,9 +47,9 @@ export default {
 }
 ```
 
-## 扩展默认主题
+## 扩展默认主题 {#extend-default-theme}
 
-### 注册全局组件
+### 注册全局组件 {#register-global-components}
 
 ```js
 // .vitepress/theme/index.js
@@ -66,7 +66,7 @@ export default {
 
 由于我们使用的是 vite，可以通过 vite 的 [glob 导入功能](https://cn.vitejs.dev/guide/features.html#glob-import)来自动注册组件
 
-### 自定义 css
+### 自定义 css {#custom-css}
 
 默认主题 CSS 可通过覆盖根级 CSS 变量进行自定义：
 
@@ -88,7 +88,7 @@ export default DefaultTheme
 
 查看可以被覆盖的[默认主题 CSS 变量](https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css)。
 
-### 布局插槽
+### 布局插槽 {#layout-slots}
 
 默认主题的 `<Layout/>` 组件包含一些插槽，可在页面的某些位置注入内容。这是将组件注入的示例：
 
@@ -148,12 +148,12 @@ export default {
 }
 ```
 
-## 使用 Vue 3 文档主题
+## 使用 Vue 3 文档主题 {#use-vue3-theme}
 
 > 本站主题 Fork 自 [@vue/theme](https://github.com/vuejs/theme/)。该主题仅适用与 [Vue 官方文档](https://staging-cn.vuejs.org)，它不遵循 semver，并且可能包含特定于 Vue 文档的硬编码逻辑。<br/>
 > 该主题不推荐直接使用，这里对该主题进行了部分修改以满足自定义需求。
 
-### 使用方法
+### 使用方法 {#guide}
 
 ```sh
 pnpm add @vue/theme
@@ -181,7 +181,7 @@ export default {
 }
 ```
 
-### 自定义主题
+### 自定义主题 {#custom-theme}
 
 通过查看源码可知，主题的 logo 和 title 是写死且无法配置的。既然如此，我们在 ThemeLayout 组件中通过修改 `NavBarTitle` 节点元素的内容，并使用配置文件中的值进行替换。
 

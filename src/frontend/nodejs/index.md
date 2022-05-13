@@ -1,6 +1,6 @@
 # NodeJs
 
-## 新一代包管理工具 pnpm
+## 新一代包管理工具 pnpm {#pnpm}
 
 > pnpm 指 performant npm (高性能的 npm)，如 [pnpm 官网](https://www.pnpm.cn/)所言，速度快、节省磁盘空间的软件包管理器。
 
@@ -13,9 +13,9 @@
 使用 npm 或 Yarn 安装依赖包时，所有软件包都将被提升到 node_modules 的根目录下。其结果是，源码可以访问本不属于当前项目所设定的依赖包。pnpm 则是通过使用符号链接的方式仅将项目的直接依赖项添加到 node_modules 的根目录下。其他依赖则放到 `node_modules/.pnpm` 目录下。
 :::
 
-## 安装
+## 安装 {#install}
 
-### 使用 Corepack
+### 使用 Corepack {#corepack}
 
 从 v16.13 开始，Node.js 发布了用于管理包管理器的 Corepack (包管理器的管理器) 。这是一项实验性功能，因此您需要通过运行以下命令来启用它
 
@@ -30,13 +30,13 @@ corepack enable
 corepack prepare pnpm@7.0.0-rc.2 --activate
 ```
 
-### 使用 npm
+### 使用 npm {#npm}
 
 ```
 npm install -g pnpm@next-7
 ```
 
-### 升级
+### 升级 {#upgrade}
 
 一旦安装完 pnpm 之后，就无需使用其它软件包管理器来更新 pnpm 了。你可以让 pnpm 自己来更新自己
 
@@ -44,7 +44,7 @@ npm install -g pnpm@next-7
 pnpm add -g pnpm
 ```
 
-## 配置
+## 配置 {#config}
 
 **pnpm 的配置格式与 npm 保持一直**。因此，pnpm 设置配置的方式应该与 npm 相同
 
@@ -60,7 +60,7 @@ pnpx create-react-app my-project
 
 更多内容请参阅官网：https://www.pnpm.cn/
 
-## 查看修改镜像源
+## 查看修改镜像源 {#look-up-mirror}
 
 默认源地址在国外，从国内访问的速度肯定比较慢，阿里旗下维护着一个完整的 npm 镜像源 registry.npm.taobao.org
 
@@ -81,7 +81,7 @@ pnpm config set registry registry.npm.taobao.org
 pnpm config set registry registry.npmjs.org
 ```
 
-## 全局和缓存目录清理
+## 全局和缓存目录清理 {#clean-cache}
 
 ```
 # 查看全局路径

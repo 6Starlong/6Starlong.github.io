@@ -1,4 +1,4 @@
-# 代码提交规范
+# 代码提交规范 {#git-hook}
 
 使用 git 初始化的项目，会在项目根路径生成 .git 文件夹（默认隐藏），其中 hooks 目录下会生成一些钩子文件，如：`pre-commit.sample` 和 `pre-push.sample`，git hook 是每次执行 git 操作时都会运行的命令或脚本，去除 .sample 后缀使其生效。
 

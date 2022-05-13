@@ -1,6 +1,6 @@
 # Git
 
-## 基础配置及使用
+## 基础配置及使用 {#base-git}
 
 ```shell
 # 设置用户名和邮箱
@@ -22,7 +22,7 @@ git branch -m master main
 git push origin --delete master
 ```
 
-## 代码回滚
+## 代码回滚 {#code-rollback}
 
 时光不能倒流，但是 git 允许我们改变历史
 
@@ -38,7 +38,7 @@ git push origin main -f # 强制推送至远程分支
 git reset --hard HEAD^
 ```
 
-#### reset 还是 revert？
+#### reset 还是 revert？{#reset-or-revert}
 
 简单理解 reset 是用来重置代码到指定的 commit，revert 是还原代码到某次提交前的状态。<br/>
 

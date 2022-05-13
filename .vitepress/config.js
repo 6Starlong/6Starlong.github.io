@@ -36,7 +36,7 @@ const sidebar = {
     {
       text: 'Vue',
       items: [
-        { text: 'VitePress 踩坑笔记', link: '/frontend/vuejs/vitepress/' },
+        { text: 'VitePress 笔记', link: '/frontend/vuejs/vitepress/' },
         { text: 'VitePress 主题化', link: '/frontend/vuejs/vitepress/theming' }
       ]
     },
