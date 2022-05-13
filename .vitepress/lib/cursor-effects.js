@@ -1,5 +1,4 @@
 // https://blog-static.cnblogs.com/files/axqa/cursor-effects.js
-
 class Circle {
   constructor({ origin, speed, color, angle, context }) {
     this.origin = origin

@@ -1,4 +1,5 @@
 ---
+home: true
 page: true
 heroText: My name is Sᴛᴀʀʟᴏɴɢ
 tagline: I'm a Frontend Developer

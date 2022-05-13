@@ -93,6 +93,16 @@ export default defineConfig({
       'script', // 光标点击特效 https://blog-static.cnblogs.com/files/axqa/cursor-effects.js
       {},
       fs.readFileSync(path.resolve(__dirname, './lib/cursor-effects.js'), 'utf8')
+    ],
+    [
+      'script', // L2Dwidget https://l2dwidget.js.org/lib/L2Dwidget.min.js
+      {},
+      fs.readFileSync(path.resolve(__dirname, './lib/live2d-widget/L2Dwidget.min.js'), 'utf8')
+    ],
+    [
+      'script', // L2Dwidget https://l2dwidget.js.org/lib/L2Dwidget.0.min.js
+      {},
+      fs.readFileSync(path.resolve(__dirname, './lib/live2d-widget/L2Dwidget.0.min.js'), 'utf8')
     ]
   ],
 
