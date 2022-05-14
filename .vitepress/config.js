@@ -11,7 +11,8 @@ const nav = [
       { text: '基础', link: '/frontend/' },
       { text: 'Vue', link: '/frontend/vuejs/' },
       { text: 'Vite', link: '/frontend/vitejs/' },
-      { text: 'Node', link: '/frontend/nodejs/' },
+      { text: 'VitePress', link: '/frontend/vitepress/' },
+      { text: 'Node', link: '/frontend/nodejs/pnpm' },
       { text: '构建部署', link: '/frontend/build-deploy/' },
       { text: '其他', link: '/frontend/other/git.md' }
     ]
@@ -32,7 +33,10 @@ const sidebar = {
   '/frontend/': [
     {
       text: '文档',
-      items: [{ text: '基础', link: '/frontend/' }]
+      items: [
+        { text: '基础', link: '/frontend/' },
+        { text: '值得收藏的库', link: '/frontend/library' }
+      ]
     },
     {
       text: 'Vue',
@@ -40,16 +44,19 @@ const sidebar = {
     },
     {
       text: 'Vite',
+      items: [{ text: 'Vite 笔记', link: '/frontend/vitejs/' }]
+    },
+    {
+      text: 'VitePress',
       items: [
-        { text: 'Vite 笔记', link: '/frontend/vitejs/' },
-        { text: 'VitePress 笔记', link: '/frontend/vitejs/vitepress/' },
-        { text: 'VitePress 主题化', link: '/frontend/vitejs/vitepress/theming' },
-        { text: 'VitePress 中添加看板娘', link: '/frontend/vitejs/vitepress/live2d' }
+        { text: 'VitePress 笔记', link: '/frontend/vitepress/' },
+        { text: '@vue/theme 主题', link: '/frontend/vitepress/theme' },
+        { text: '主题美化', link: '/frontend/vitepress/beautify' }
       ]
     },
     {
       text: 'Node',
-      items: [{ text: '包管理器', link: '/frontend/nodejs/' }]
+      items: [{ text: 'pnpm 包管理器', link: '/frontend/nodejs/pnpm' }]
     },
     {
       text: '构建部署',
@@ -72,10 +79,9 @@ const sidebar = {
     {
       text: 'Stars',
       items: [
-        { text: 'VsCode 编辑器', link: '/stars/vscode' },
         { text: 'Windows 系统', link: '/stars/windows' },
         { text: 'Chrome 拓展', link: '/stars/chrome' },
-        { text: '网站推荐', link: '/stars/website' },
+        { text: 'WebSite', link: '/stars/website' },
         { text: '应用程序', link: '/stars/app' }
       ]
     }
@@ -121,10 +127,10 @@ export default defineConfig({
     algolia: {
       indexName: 'vitepress',
       appId: 'RW1NM5N1BT',
-      apiKey: '09722d8e15c686b4057e13ec2b7b0970'
-      // searchParameters: {
-      //   facetFilters: ['version:v3']
-      // }
+      apiKey: '09722d8e15c686b4057e13ec2b7b0970',
+      searchParameters: {
+        facetFilters: ['version:v3']
+      }
     },
     // 首页链接
     homeLinks: [

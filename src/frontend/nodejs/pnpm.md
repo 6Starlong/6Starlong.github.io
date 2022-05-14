@@ -1,8 +1,10 @@
-# NodeJs
+# pnpm 包管理器
+
+[pnpm 官网](https://www.pnpm.cn/)
 
 ## 新一代包管理工具 pnpm {#pnpm}
 
-> pnpm 指 performant npm (高性能的 npm)，如 [pnpm 官网](https://www.pnpm.cn/)所言，速度快、节省磁盘空间的软件包管理器。
+> pnpm 指 performant npm (高性能的 npm)，速度快、节省磁盘空间的软件包管理器。
 
 当使用 npm 或 Yarn 时，如果你有 100 个项目，并且所有项目都有一个相同的依赖包，那么， 你在硬盘上就需要保存 100 份该相同依赖包的副本。然而，如果是使用 pnpm，依赖包将被存放在一个统一的位置
 

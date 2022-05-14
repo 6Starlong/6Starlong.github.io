@@ -1,8 +1,86 @@
-# 配置主题 {#configure-the-theme}
+---
+outline: deep
+---
 
-参考文档：https://vitepress.vuejs.org/guide/theming.html
+# VitePress
 
-## 使用自定义主题 {#use-custom-theme}
+- [文档](https://vitepress.vuejs.org/)
+- [Github](https://github.com/vuejs/vitepress)
+- [VuePress](https://v2.vuepress.vuejs.org/zh/guide/)
+
+## 配置 {#config}
+
+### 配置文件 {#config-file}
+
+VitePress 站点的基本配置文件是 `.vitepress/config.js `，基础的配置文件是这样的：
+
+```js
+module.exports = {
+  lang: 'zh-CN',
+  title: 'Hello Vitepress',
+  description: '这是一个 Vitepress 站点'
+}
+```
+
+::: tip
+目前 VitePress 包含的所有配置可以查看 [config.ts](https://github.com/vuejs/vitepress/blob/main/src/node/config.ts)
+:::
+
+## 在 Markdown 中使用 Vue {#using-vue}
+
+### 浏览器 API 访问限制 {#browser-api-access-restrictions}
+
+由于 VitePress 应用程序在生成静态构建时在 Node.js 中进行服务器渲染，因此任何 Vue 使用都必须符合[通用代码要求](https://staging-cn.vuejs.org/guide/scaling-up/ssr.html)。简而言之，确保只在 `beforeMount` 或 `mounted` 钩子中访问浏览器 /DOM API。
+
+如果您正在使用或演示对 SSR 不友好的组件（例如，包含自定义指令），您可以将它们包装在内置 `<ClientOnly>` 组件中：
+
+```vue-html
+<ClientOnly>
+    <NonSSRFriendlyComponent />
+</ClientOnly>
+```
+
+请注意，这不会修复在导入时访问浏览器 API 的组件或库。要在导入时使用假定浏览器环境的代码，您需要在适当的生命周期挂钩中动态导入它们：
+
+```vue
+<script>
+export default {
+  mounted() {
+    import('./lib-that-access-window-on-import').then((module) => {
+      // use code
+    })
+  }
+}
+</script>
+```
+
+如果你的模块 export default 是一个 Vue 组件，你可以动态注册它：
+
+```vue
+<template>
+  <component v-if="dynamicComponent" :is="dynamicComponent"></component>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      dynamicComponent: null
+    }
+  },
+
+  mounted() {
+    import('./lib-that-access-window-on-import').then((module) => {
+      this.dynamicComponent = module.default
+    })
+  }
+}
+</script>
+```
+
+## 主题化 {#theming}
+
+### 使用自定义主题 {#use-custom-theme}
 
 可以通过添加文件 `.vitepress/theme/index.js` 来启用自定义主题
 
@@ -47,9 +125,9 @@ export default {
 }
 ```
 
-## 扩展默认主题 {#extend-default-theme}
+### 扩展默认主题 {#extend-default-theme}
 
-### 注册全局组件 {#register-global-components}
+#### 注册全局组件 {#register-global-components}
 
 ```js
 // .vitepress/theme/index.js
@@ -88,7 +166,7 @@ export default DefaultTheme
 
 查看可以被覆盖的[默认主题 CSS 变量](https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css)。
 
-### 布局插槽 {#layout-slots}
+#### 布局插槽 {#layout-slots}
 
 默认主题的 `<Layout/>` 组件包含一些插槽，可在页面的某些位置注入内容。这是将组件注入的示例：
 
@@ -146,131 +224,4 @@ export default {
     })
   }
 }
-```
-
-## 使用 Vue 3 文档主题 {#use-vue3-theme}
-
-> 本站主题 Fork 自 [@vue/theme](https://github.com/vuejs/theme/)。该主题仅适用与 [Vue 官方文档](https://staging-cn.vuejs.org)，它不遵循 semver，并且可能包含特定于 Vue 文档的硬编码逻辑。<br/>
-> 该主题不推荐直接使用，这里对该主题进行了部分修改以满足自定义需求。
-
-### 使用方法 {#guide}
-
-```sh
-pnpm add @vue/theme
-```
-
-```js{6}
-// .vitepress/config.js
-import { defineConfig } from 'vitepress'
-import baseConfig from '@vue/theme/config'
-
-export default defineConfig({
-  extends: baseConfig
-  // ...
-})
-```
-
-```js
-// .vitepress/theme/index.js
-import { VPTheme } from '@vue/theme'
-import ThemeLayout from './components/ThemeLayout.vue'
-
-export default {
-  ...VPTheme,
-  Layout: ThemeLayout
-}
-```
-
-### 自定义主题 {#custom-theme}
-
-通过查看源码可知，主题的 logo 和 title 是写死且无法配置的。既然如此，我们在 ThemeLayout 组件中通过修改 `NavBarTitle` 节点元素的内容，并使用配置文件中的值进行替换。
-
-1. 操作 dom
-
-```vue{7,13-15,18,19}
-<script setup>
-import { onMounted } from 'vue'
-import { useData } from 'vitepress'
-import { VPTheme } from '@vue/theme'
-
-// 引入自定义  NavBarTitle 组件
-import NavBarTitle from './NavBarTitle.vue'
-
-const { Layout } = VPTheme
-const { site, theme } = useData()
-
-onMounted(() => {
-  // document.querySelector('.VPNavBarTitle').innerHTML = `
-  // <img class="logo" src="${theme.value.logo}" />
-  // <span class="text">${site.value.title}</span>`
-
-  // 创建虚拟 dom 并挂载到 VPNavBarTitle 元素节点上
-  const app = createApp(NavBarTitle, { logo: theme.value.logo, title: site.value.title })
-  app.mount(document.querySelector('.VPNavBarTitle'))
-})
-</script>
-
-<template>
-  <Layout> </Layout>
-</template>
-```
-
-2. 通过 style (不推荐)
-
-```vue{12,13,17,18,28,43,48,49}
-<script setup>
-import { onMounted } from 'vue'
-import { useData } from 'vitepress'
-import { VPTheme } from '@vue/theme'
-
-const { Layout } = VPTheme
-const { site, theme } = useData()
-
-// 1.通过设置 attribute，并在 style 中使用 attr 引入
-onMounted(() => {
-  const VPNavBarTitle = document.querySelector('.VPNavBarTitle')
-  // VPNavBarTitle.setAttribute('style', `background-image: url("${theme.value.logo}")`)
-  // VPNavBarTitle.setAttribute('data-after', site.value.title)
-})
-
-// 2.通过 v-bind in css
-const logo = theme.value.logo
-const title = site.value.title
-</script>
-
-<template>
-  <Layout> </Layout>
-</template>
-
-<style>
-.VPNavBarTitle .logo,
-.VPNavBarTitle .text {
-  display: none;
-}
-
-.VPNavBarTitle {
-  width: 150px;
-  /* background-size: 2rem;
-  background-repeat: no-repeat;
-  background-position: left; */
-}
-
-.VPNavBarTitle::before {
-  content: '';
-  position: absolute;
-  width: 2rem;
-  height: 2rem;
-  background-image: v-bind(`url('${logo}') `);
-  background-size: cover;
-}
-
-.VPNavBarTitle::after {
-  /* content: attr(data-after); */
-  content: v-bind(` '${title}' `);
-  position: absolute;
-  margin-left: 40px;
-  font-size: 16px;
-  font-weight: 500;
-}
-</style>
 ```

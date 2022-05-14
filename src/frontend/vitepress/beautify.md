@@ -1,9 +1,11 @@
-# 在 VitePress 中添加看板娘卡通动画
+# 主题美化
+
+## 添加看板娘卡通动画
 
 - [API](https://l2dwidget.js.org/docs/index.html)
 - [Github](https://github.com/xiazeyu/live2d-widget.js)
 
-## 用法 {#live2d-usage}
+### 用法 {#live2d-usage}
 
 1. 引入 L2Dwidget.min.js
 2. 引入模板文件 live2d-widget-model-shizuku
@@ -20,7 +22,7 @@ L2Dwidget.init({
 效果：
 ![An Image](./images/live2d-widget-model-shizuku.png)
 
-### 引入地址 {#live2d-import}
+#### 引入地址 {#live2d-import}
 
 - 从 live2d 官网引入 [L2Dwidget.min.js](https://l2dwidget.js.org/lib/L2Dwidget.min.js)
 
@@ -30,7 +32,7 @@ L2Dwidget.init({
 
 更多模型可以在 `Github` 或 `npmjs` 上搜索 `live2d-widget-models`
 
-## 配置 {#live2d-config}
+### 配置 {#live2d-config}
 
 ```js
 L2Dwidget.init({
@@ -51,7 +53,7 @@ L2Dwidget.on('*', (name) => {
 })
 ```
 
-## VitePress 中使用 live2d {#live2d-vitepress}
+### 添加到当前站点 {#live2d-of-current-site}
 
 在 `.vitepress/lib/live2d-widget` 目录下创建 `L2Dwidget.min.js` 和 `L2Dwidget.min.0.js` 两个文件，复制源码到这两个文件中。
 
@@ -75,16 +77,28 @@ defineConfig({
 })
 ```
 
-在 `Layout` 组件中进行初始化：
+```js
+onMounted(() => {
+  L2Dwidget.init({
+    model: {
+      // 使用 live2d-widget-model-violet 的模型
+      jsonPath: 'https://unpkg.com/live2d-widget-model-violet@1.0.0/assets/14.json',
+      scale: 1.5
+    },
+    display: { position: 'left', width: 240, height: 480, hOffset: 50, vOffset: -50 },
+    mobile: { show: false }
+  })
+})
+```
+
+## 鼠标点击特效 {#click-effect}
+
+创建 `.vitepress/lib/cursor-effects.js` 文件，复制[源码](https://blog-static.cnblogs.com/files/axqa/cursor-effects.js)。
+
+该特效插件使用浏览器 API 创建 DOM，由于 Vitepress 应用程序[浏览器 API 访问限制](/frontend/vitepress/#browser-api-access-restrictions)，在 `mounted` 钩子中动态导入：
 
 ```js
-L2Dwidget.init({
-  model: {
-    // 使用 live2d-widget-model-violet 的模型
-    jsonPath: 'https://unpkg.com/live2d-widget-model-violet@1.0.0/assets/14.json',
-    scale: 1.5
-  },
-  display: { position: 'left', width: 240, height: 480, hOffset: 50, vOffset: -50 },
-  mobile: { show: false }
+onMounted(() => {
+  import('@/lib/cursor-effects')
 })
 ```
