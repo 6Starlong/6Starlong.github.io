@@ -18,7 +18,7 @@ onMounted(() => {
       class="yiyan-text"
       title="一言 点击复制"
       v-if="yiyan.hitokoto"
-      @mouseenter="showFrom = true"
+      @mouseover="showFrom = true"
       @mouseout="showFrom = false"
       @click="copyToClip(`「 ${yiyan.hitokoto} 」 - ${yiyan.from}`)"
     >

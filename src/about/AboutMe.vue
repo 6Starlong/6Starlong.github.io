@@ -31,7 +31,6 @@ import { VTIconMapPin, VTIconMail, VTIconGitHub } from '@vue/theme'
 
 <style scoped>
 .About {
-  margin: 50px 0;
   padding: 2rem;
   border-radius: 10px;
   background-color: var(--vt-c-bg-soft);

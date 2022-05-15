@@ -8,7 +8,6 @@ const nav = [
     text: '前端开发笔记',
     activeMatch: `^/frontend/`,
     items: [
-      { text: '基础', link: '/frontend/' },
       { text: 'Vue', link: '/frontend/vuejs/' },
       { text: 'Vite', link: '/frontend/vitejs/' },
       { text: 'VitePress', link: '/frontend/vitepress/' },
@@ -19,7 +18,7 @@ const nav = [
   },
   {
     text: '⭐ Stars',
-    link: '/stars/',
+    link: '/stars/developer',
     activeMatch: `^/stars/`
   },
   {
@@ -31,13 +30,6 @@ const nav = [
 
 const sidebar = {
   '/frontend/': [
-    {
-      text: '文档',
-      items: [
-        { text: '基础', link: '/frontend/' },
-        { text: '值得收藏的库', link: '/frontend/library' }
-      ]
-    },
     {
       text: 'Vue',
       items: []
@@ -79,9 +71,10 @@ const sidebar = {
     {
       text: 'Stars',
       items: [
+        { text: 'Developer', link: '/stars/developer' },
+        { text: 'WebSite', link: '/stars/website' },
         { text: 'Windows 系统', link: '/stars/windows' },
         { text: 'Chrome 拓展', link: '/stars/chrome' },
-        { text: 'WebSite', link: '/stars/website' },
         { text: '应用程序', link: '/stars/app' }
       ]
     }
@@ -135,7 +128,7 @@ export default defineConfig({
     // 首页链接
     homeLinks: [
       { icon: 'github', link: 'https://github.com/6Starlong' },
-      { icon: 'blog', link: '/frontend/', default: true }
+      { icon: 'blog', link: '/explore', default: true }
     ],
     // 社区链接
     socialLinks: [{ icon: 'github', link: 'https://github.com/6Starlong' }],
