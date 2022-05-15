@@ -28,6 +28,7 @@ const { theme, frontmatter } = useData()
     </div>
     <p class="leading-8 tracking-[9px]">******</p>
     <p>☕ This site is built with VitePress 🛠️</p>
+    <YiYan />
   </div>
 </template>
 

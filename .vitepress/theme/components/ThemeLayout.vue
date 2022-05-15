@@ -25,7 +25,7 @@ onMounted(() => {
       jsonPath: 'https://unpkg.com/live2d-widget-model-violet@1.0.0/assets/14.json',
       scale: 1.5
     },
-    display: { position: 'left', width: 240, height: 480, hOffset: 50, vOffset: -50 },
+    display: { position: 'right', width: 240, height: 480, hOffset: 0, vOffset: -50 },
     mobile: { show: false }
   })
   L2Dwidget.on('*', (e, target) => {
@@ -55,6 +55,7 @@ onMounted(() => {
     <!-- <template #aside-top> this could be huge </template> -->
     <!-- <template #aside-mid> Sponsors </template> -->
     <!-- <template #aside-bottom> Sponsors </template> -->
+    <template #content-bottom> <YiYan /> </template>
     <template #aside-mid> <PlayGround /> </template>
   </Layout>
 </template>

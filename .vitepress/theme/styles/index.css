@@ -49,3 +49,9 @@ body::-webkit-scrollbar {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(84, 84, 84, 0.8);
 }
+
+@media screen and (max-width: 1280px) {
+  #live2d-widget {
+    opacity: 0 !important;
+  }
+}
