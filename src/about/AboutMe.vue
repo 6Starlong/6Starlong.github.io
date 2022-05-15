@@ -25,12 +25,7 @@ import { VTIconMapPin, VTIconMail, VTIconGitHub } from '@vue/theme'
         </div>
       </div>
     </div>
-
-    <img
-      src="https://w.wallhaven.cc/full/4y/wallhaven-4yvowx.jpg"
-      class="mt-[50px] rounded-lg"
-      style="border-radius: 8px"
-    />
+    <img src="./wallhaven.jpg" class="mt-[50px] rounded-lg" style="border-radius: 8px" />
   </div>
 </template>
 
