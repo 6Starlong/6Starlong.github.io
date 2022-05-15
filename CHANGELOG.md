@@ -1,3 +1,24 @@
+## [1.0.5](https://github.com/6Starlong/6Starlong.github.io/compare/v1.0.4...v1.0.5) (2022-05-15)
+
+### Bug Fixes
+
+- 动态导入 cursor-effects ([4855aa4](https://github.com/6Starlong/6Starlong.github.io/commit/4855aa471fca3b766fe781acab14322b7ad68a2c))
+- 引用和 zhlint 修复 ([00fa450](https://github.com/6Starlong/6Starlong.github.io/commit/00fa4501a105ff95b3356db57da217f27d9fd350))
+- image rename ([c417838](https://github.com/6Starlong/6Starlong.github.io/commit/c4178381fb0bf1c8d55d1932cbcfd4075f35f1a4))
+- toc 使用英文描点 ([1600d0f](https://github.com/6Starlong/6Starlong.github.io/commit/1600d0f7dfa9a694fbe0334fbab01dda36092b3d))
+
+### Features
+
+- 鼠标样式特效 ([e0de5b2](https://github.com/6Starlong/6Starlong.github.io/commit/e0de5b2912096f555344cc6e35916e282644b52c))
+- 添加 文档最后更新时间 ([1f81538](https://github.com/6Starlong/6Starlong.github.io/commit/1f8153890742c1e012644232fe23df2684b1bc29))
+- 添加看板娘到页面 ([774a9ce](https://github.com/6Starlong/6Starlong.github.io/commit/774a9ced9c727644056d3d29521309ad407eedd2))
+- 添加一言 API ([2310fcf](https://github.com/6Starlong/6Starlong.github.io/commit/2310fcf9f001f9e7aec2c1b889241938c1c20c1d))
+
+### Performance Improvements
+
+- 定义 public 目录 ([59645d9](https://github.com/6Starlong/6Starlong.github.io/commit/59645d960efc3a570688a7bf4fdf5ad9f1718657))
+- 禁用 img 原生拖拽 ([3ca59dd](https://github.com/6Starlong/6Starlong.github.io/commit/3ca59dd46ff4a083d9d0a12d1ed35d995a01d83a))
+
 ## [1.0.4](https://github.com/6Starlong/6Starlong.github.io/compare/v1.0.3...v1.0.4) (2022-04-22)
 
 ### Features
