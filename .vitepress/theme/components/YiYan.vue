@@ -15,9 +15,9 @@ onMounted(() => {
 <template>
   <div class="app-yiyan">
     <p
+      v-if="yiyan.hitokoto"
       class="yiyan-text"
       title="一言 点击复制"
-      v-if="yiyan.hitokoto"
       @mouseover="showFrom = true"
       @mouseout="showFrom = false"
       @click="copyToClip(`「 ${yiyan.hitokoto} 」 - ${yiyan.from}`)"
@@ -25,7 +25,7 @@ onMounted(() => {
       「 {{ yiyan.hitokoto }} 」
     </p>
     <Transition name="fade">
-      <p class="yiyan-from" v-show="showFrom">- {{ yiyan.from }} -</p>
+      <p v-show="showFrom" class="yiyan-from">- {{ yiyan.from }} -</p>
     </Transition>
   </div>
 </template>

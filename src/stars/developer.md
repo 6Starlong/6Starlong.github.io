@@ -12,7 +12,7 @@
 
 ## API
 
-- [一言 API](https://developer.hitokoto.cn/) - 所谓一言（ヒトコト），即一句话。
+- [一言 API](https://developer.hitokoto.cn/) - 所谓一言 (ヒトコト)，即一句话。
 
 ## CSS
 

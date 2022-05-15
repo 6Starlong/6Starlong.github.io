@@ -57,7 +57,7 @@ onMounted(() => {
     <!-- <template #aside-bottom> Sponsors </template> -->
     <template #content-bottom>
       <div class="content-bottom">
-        <div class="update-time" v-if="page.lastUpdated && frontmatter.lastUpdated !== false">
+        <div v-if="page.lastUpdated && frontmatter.lastUpdated !== false" class="update-time">
           最后更新时间：{{ new Date(page.lastUpdated).toLocaleString() }}
         </div>
         <YiYan />
