@@ -89,6 +89,7 @@ export default defineConfig({
   description: '我们只能耸耸肩说“好吧”！',
   srcDir: 'src',
   outDir: 'dist',
+  lastUpdated: true,
 
   // 从head引入
   head: [

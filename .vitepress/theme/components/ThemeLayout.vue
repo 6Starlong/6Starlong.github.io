@@ -55,7 +55,14 @@ onMounted(() => {
     <!-- <template #aside-top> this could be huge </template> -->
     <!-- <template #aside-mid> Sponsors </template> -->
     <!-- <template #aside-bottom> Sponsors </template> -->
-    <template #content-bottom> <YiYan /> </template>
+    <template #content-bottom>
+      <div class="content-bottom">
+        <div class="update-time" v-if="page.lastUpdated && frontmatter.lastUpdated !== false">
+          最后更新时间：{{ new Date(page.lastUpdated).toLocaleString() }}
+        </div>
+        <YiYan />
+      </div>
+    </template>
     <template #aside-mid> <PlayGround /> </template>
   </Layout>
 </template>
@@ -63,5 +70,10 @@ onMounted(() => {
 <style scoped>
 .VPApp {
   font-synthesis: weight style small-caps;
+}
+.update-time {
+  @apply text-right text-sm;
+  color: var(--vt-c-green);
+  transform: translateY(-2rem);
 }
 </style>
