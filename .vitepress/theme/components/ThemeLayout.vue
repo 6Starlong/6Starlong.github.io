@@ -14,6 +14,11 @@ watch(page, () => {
 })
 
 onMounted(() => {
+  console.log(
+    "%cSᴛᴀʀʟᴏɴɢ💫's Blog\n心之所向，素履以往。\n用代码表达言语的魅力，用代码书写山河的壮丽。",
+    'color:#00a5f2;line-height:24px;'
+  )
+
   // 挂载 NavBarTitle 组件
   const app = createApp(NavBarTitle, { logo: theme.value.logo, title: site.value.title })
   app.mount(document.querySelector('.VPNavBarTitle'))
