@@ -1,6 +1,7 @@
 <script setup>
 import NavBarTitle from './NavBarTitle.vue'
 import PlayGround from './PlayGround.vue'
+import Sakura from './Sakura.vue'
 
 import { createApp, watch, onMounted } from 'vue'
 import { useData } from 'vitepress'
@@ -65,11 +66,15 @@ onMounted(() => {
         <div v-if="page.lastUpdated && frontmatter.lastUpdated !== false" class="update-time">
           最后更新时间：{{ new Date(page.lastUpdated).toLocaleString() }}
         </div>
+
         <YiYan />
       </div>
     </template>
+
     <template #aside-mid> <PlayGround /> </template>
   </Layout>
+
+  <Sakura />
 </template>
 
 <style scoped>
