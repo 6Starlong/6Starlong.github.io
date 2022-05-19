@@ -30,7 +30,7 @@ L2Dwidget.init({
 
 - 使用 unpkg 引入模型 [live2d-widget-model-shizuku](https://unpkg.com/browse/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json)
 
-更多模型可以在 `Github` 或 `npmjs` 上搜索 `live2d-widget-models`
+在 [Github](https://github.com/search?q=live2d-widget-model) 或 [NPM](https://www.npmjs.com/search?q=live2d-widget-model) 上查找更多 live2d-widget-models 模型。
 
 ### 配置 {#live2d-config}
 

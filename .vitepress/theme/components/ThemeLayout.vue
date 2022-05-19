@@ -10,15 +10,9 @@ import { VPTheme } from '@vue/theme'
 const { site, theme, page, frontmatter } = useData()
 const { Layout } = VPTheme
 
-watch(page, () => {
-  document.querySelector('#live2d-widget').style.opacity = frontmatter.value.home ? 0 : 1
-})
-
 onMounted(() => {
-  console.log(
-    "%cSᴛᴀʀʟᴏɴɢ💫's Blog\n心之所向，素履以往。\n用代码表达言语的魅力，用代码书写山河的壮丽。",
-    'color:#00a5f2;line-height:24px;'
-  )
+  console.log("%cSᴛᴀʀʟᴏɴɢ💫's Blog\n心之所向，素履以往。", 'color:#00a5f2;line-height:24px;')
+  console.log('%c用代码表达言语的魅力，\n用代码书写山河的壮丽。', 'color:#00a5f2;line-height:24px;')
 
   // 挂载 NavBarTitle 组件
   const app = createApp(NavBarTitle, { logo: theme.value.logo, title: site.value.title })
@@ -36,6 +30,10 @@ onMounted(() => {
   })
   L2Dwidget.on('*', (e, target) => {
     e === 'create-container' && (target.style.opacity = frontmatter.value.home ? 0 : 1)
+  })
+
+  watch(page, () => {
+    document.querySelector('#live2d-widget').style.opacity = frontmatter.value.home ? 0 : 1
   })
 
   // 动态导入光标点击特效
@@ -64,7 +62,7 @@ onMounted(() => {
     <template #content-bottom>
       <div class="content-bottom">
         <div v-if="page.lastUpdated && frontmatter.lastUpdated !== false" class="update-time">
-          最后更新时间：{{ new Date(page.lastUpdated).toLocaleString() }}
+          最近更新时间：{{ new Date(page.lastUpdated).toLocaleString() }}
         </div>
 
         <YiYan />
