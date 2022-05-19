@@ -5,6 +5,11 @@ import baseConfig from '@vue/theme/config'
 
 const nav = [
   {
+    text: '首页',
+    link: '/',
+    activeMatch: ``
+  },
+  {
     text: '前端开发笔记',
     activeMatch: `^/frontend/`,
     items: [
@@ -28,7 +33,7 @@ const nav = [
   }
 ]
 
-const sidebar = {
+export const sidebar = {
   '/frontend/': [
     {
       text: 'Vue',
@@ -62,8 +67,8 @@ const sidebar = {
     {
       text: '其他',
       items: [
-        { text: 'Git 笔记', link: '/frontend/other/git.md' },
-        { text: 'VsCode', link: '/frontend/other/vscode.md' }
+        { text: 'Git 笔记', link: '/frontend/other/git' },
+        { text: 'VsCode', link: '/frontend/other/vscode' }
       ]
     }
   ],
@@ -129,7 +134,7 @@ export default defineConfig({
     // 首页链接
     homeLinks: [
       { icon: 'github', link: 'https://github.com/6Starlong' },
-      { icon: 'blog', link: '/explore', default: true }
+      { icon: 'blog', link: '/', default: true }
     ],
     // 社区链接
     socialLinks: [{ icon: 'github', link: 'https://github.com/6Starlong' }],
@@ -140,14 +145,14 @@ export default defineConfig({
   },
   // markdown插件
   markdown: {},
-
   vite: {
     // 定义 public 目录
     publicDir: path.resolve(__dirname, '../public'),
     // 设置vite目录别名
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, '') // .vitepress
+        '@': path.resolve(__dirname, ''), // .vitepress
+        '@src': path.resolve(__dirname, '../src')
       }
     }
   }

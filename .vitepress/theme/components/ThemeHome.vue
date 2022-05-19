@@ -1,10 +1,15 @@
 <script setup>
+import { ref } from 'vue'
 import { useData } from 'vitepress'
+import { filterPosts } from '@/utils'
+
 const { theme, frontmatter } = useData()
+
+const postsList = ref(filterPosts())
 </script>
 
 <template>
-  <div id="hero">
+  <header id="hero">
     <img
       v-if="frontmatter.heroImage || theme.logo"
       class="inline-block h-[200px]"
@@ -29,7 +34,10 @@ const { theme, frontmatter } = useData()
     <p class="leading-8 tracking-[9px]">******</p>
     <p>☕ This site is built with VitePress 🛠️</p>
     <YiYan />
-  </div>
+  </header>
+  <main>
+    <div v-for="(item, index) in postsList" :key="index"></div>
+  </main>
 </template>
 
 <style scoped>
