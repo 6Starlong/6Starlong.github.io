@@ -9,7 +9,7 @@ export default {
   watch: 'src/**',
   // 可以从 fs 读取并生成数据
   load: async () => {
-    // 将 lastUpdated 时间设置为 git commit 时间戳
+    // 使用基于 git 的 lastUpdated 数据
     return await Promise.all(
       [...sidebar['/frontend/'], ...sidebar['/stars/']].map(async (group) => ({
         text: group.text,
@@ -24,7 +24,8 @@ export default {
   }
 }
 
-// 获取文件 git commit timestamp
+// https://github.com/vuejs/vitepress/blob/main/src/node/utils/getGitTimestamp.ts
+// 获取对应文件 的 git commit timestamp
 function getGitTimestamp(file) {
   return new Promise((resolve, reject) => {
     const child = spawn('git', ['log', '-1', '--pretty="%ci"', file])

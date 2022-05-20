@@ -1,11 +1,6 @@
 <script setup>
-import { ref } from 'vue'
 import { useData } from 'vitepress'
-import { filterPosts } from '@/utils'
-
 const { theme, frontmatter } = useData()
-
-const postsList = ref(filterPosts())
 </script>
 
 <template>
@@ -35,9 +30,6 @@ const postsList = ref(filterPosts())
     <p>☕ This site is built with VitePress 🛠️</p>
     <YiYan />
   </header>
-  <main>
-    <div v-for="(item, index) in postsList" :key="index"></div>
-  </main>
 </template>
 
 <style scoped>

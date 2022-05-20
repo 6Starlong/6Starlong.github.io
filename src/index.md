@@ -6,7 +6,8 @@ tagline: I'm a Frontend Developer
 ---
 
 <script setup>
-import ThemeHome from '@theme/components/ThemeHome.vue'
+import Hero from '@theme/components/Hero.vue'
 </script>
 
-<ThemeHome />
+<Hero />
+<BlogMain />

@@ -30,7 +30,9 @@
   opacity: 0;
 }
 
-body {
+html {
+  /* 页面平滑滚动 */
+  scroll-behavior: smooth;
   /* 鼠标样式 */
   cursor: url('./Arrow.ico'), default;
 }
