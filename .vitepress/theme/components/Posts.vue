@@ -31,7 +31,9 @@ function goPosts(item) {
     <div v-for="(item, index) in postsList" :key="index" @click="goPosts(item)" class="posts">
       <div>{{ item.text }}</div>
       <div class="mt-[20px] flex justify-between">
-        <span class="text-xs">{{ new Date(item.lastUpdated).toLocaleString() }}</span>
+        <span class="text-xs">
+          {{ item.lastUpdated ? new Date(item.lastUpdated).toLocaleString() : null }}
+        </span>
       </div>
     </div>
     <div class="flex justify-between">

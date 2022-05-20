@@ -10,15 +10,22 @@ const nav = [
     activeMatch: ``
   },
   {
-    text: '前端开发笔记',
+    text: '前端',
     activeMatch: `^/frontend/`,
     items: [
-      { text: 'Vue', link: '/frontend/vuejs/' },
-      { text: 'Vite', link: '/frontend/vitejs/' },
-      { text: 'VitePress', link: '/frontend/vitepress/' },
+      { text: '开发笔记', link: '/frontend/notes/' },
       { text: 'Node', link: '/frontend/nodejs/pnpm' },
-      { text: '构建部署', link: '/frontend/build-deploy/' },
       { text: '其他', link: '/frontend/other/git.md' }
+    ]
+  },
+  {
+    text: '框架',
+    activeMatch: `^/frame/`,
+    items: [
+      { text: 'Vue', link: '/frame/vuejs/' },
+      { text: 'Vite', link: '/frame/vitejs/' },
+      { text: 'VitePress', link: '/frame/vitepress/' },
+      { text: '构建部署', link: '/frame/build-deploy/' }
     ]
   },
   {
@@ -36,39 +43,46 @@ const nav = [
 export const sidebar = {
   '/frontend/': [
     {
-      text: 'Vue',
-      items: []
-    },
-    {
-      text: 'Vite',
-      items: [{ text: 'Vite 笔记', link: '/frontend/vitejs/' }]
-    },
-    {
-      text: 'VitePress',
-      items: [
-        { text: 'VitePress 笔记', link: '/frontend/vitepress/' },
-        { text: '@vue/theme 主题', link: '/frontend/vitepress/theme' },
-        { text: '主题美化', link: '/frontend/vitepress/beautify' }
-      ]
+      text: '开发笔记',
+      items: [{ text: '页面平滑滚动', link: '/frontend/notes/' }]
     },
     {
       text: 'Node',
       items: [{ text: 'pnpm 包管理器', link: '/frontend/nodejs/pnpm' }]
     },
     {
-      text: '构建部署',
-      items: [
-        { text: '代码提交规范化', link: '/frontend/build-deploy/git-hook' },
-        { text: 'verify-commit', link: '/frontend/build-deploy/verify-commit' },
-        { text: 'changelog 生成日志', link: '/frontend/build-deploy/changelog' },
-        { text: 'eslint 代码检查工具', link: '/frontend/build-deploy/eslint' }
-      ]
-    },
-    {
       text: '其他',
       items: [
         { text: 'Git 笔记', link: '/frontend/other/git' },
         { text: 'VsCode', link: '/frontend/other/vscode' }
+      ]
+    }
+  ],
+  '/frame/': [
+    {
+      text: 'Vue',
+      items: []
+    },
+    {
+      text: 'Vite',
+      items: [{ text: 'Vite 笔记', link: '/frame/vitejs/' }]
+    },
+    {
+      text: 'VitePress',
+      items: [
+        { text: 'VitePress 笔记', link: '/frame/vitepress/' },
+        { text: '@vue/theme 主题', link: '/frame/vitepress/theme' },
+        { text: '主题美化', link: '/frame/vitepress/beautify' }
+      ]
+    },
+
+    {
+      text: '构建部署',
+      items: [
+        { text: '代码提交规范化', link: '/frame/build-deploy/git-hook' },
+        { text: 'verify-commit', link: '/frame/build-deploy/verify-commit' },
+        { text: 'changelog 生成日志', link: '/frame/build-deploy/changelog' },
+        { text: 'eslint 代码检查工具', link: '/frame/build-deploy/eslint' }
       ]
     }
   ],

@@ -11,15 +11,17 @@ export default {
   load: async () => {
     // 使用基于 git 的 lastUpdated 数据
     return await Promise.all(
-      [...sidebar['/frontend/'], ...sidebar['/stars/']].map(async (group) => ({
-        text: group.text,
-        items: await Promise.all(
-          group.items.map(async (item) => ({
-            ...item,
-            lastUpdated: await getGitTimestamp(pathToFile(item.link))
-          }))
-        )
-      }))
+      [...sidebar['/frontend/'], ...sidebar['/frame/'], ...sidebar['/stars/']].map(
+        async (group) => ({
+          text: group.text,
+          items: await Promise.all(
+            group.items.map(async (item) => ({
+              ...item,
+              lastUpdated: await getGitTimestamp(pathToFile(item.link))
+            }))
+          )
+        })
+      )
     )
   }
 }
