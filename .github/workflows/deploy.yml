@@ -1,6 +1,7 @@
-name: Deploy to Gitee
+name: Deploy to Github
 
 on:
+  # 每当 push 到 main 分支时触发部署
   push:
     branches:
       - main
@@ -10,15 +11,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
+          fetch-depth: 0
 
       - name: Install pnpm
         uses: pnpm/action-setup@v2.0.1
         with:
+          # 选择要使用的 pnpm 版本
           version: ^6.24.4
 
       - name: Set node version to 16
         uses: actions/setup-node@v2
         with:
+          # 选择要使用的 node 版本
           node-version: 16
           cache: 'pnpm'
 
