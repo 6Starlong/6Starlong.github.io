@@ -3,8 +3,8 @@ import path from 'path'
 import { sidebar } from '../.vitepress/config'
 import { spawn } from 'cross-spawn'
 
-// 默认导出 Object，并包含一个 load 函数。使用 import "data" 导入解析后的静态数据。
-export default {
+// 默认导出 Object，并包含一个 load 函数。
+export const data = {
   // 声明应该触发 HMR 的文件
   watch: 'src/**',
   // 可以从 fs 读取并生成数据
@@ -25,9 +25,11 @@ export default {
     )
   }
 }
+// 使用 import "data" 解析静态数据
+export default { ...data }
 
-// https://github.com/vuejs/vitepress/blob/main/src/node/utils/getGitTimestamp.ts
 // 获取对应文件 的 git commit timestamp
+// https://github.com/vuejs/vitepress/blob/main/src/node/utils/getGitTimestamp.ts
 function getGitTimestamp(file) {
   return new Promise((resolve, reject) => {
     const child = spawn('git', ['log', '-1', '--pretty="%ci"', file])

@@ -1,0 +1,37 @@
+name: Deploy to Gitee
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: ^6.24.4
+
+      - name: Set node version to 16
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: 'pnpm'
+
+      - run: pnpm install
+      - run: pnpm run build
+
+      - run: |
+          cd dist
+          git init
+          git config user.email "starlong.lu@gmail.com"
+          git config user.name "Starlong"
+          git branch -m gh-pages
+          git add .
+          git commit -m "Deploy to GitHub pages"
+          git remote add origin https://6Starlong:${{ secrets.GITHUB_TOKEN }}@github.com/6Starlong/6Starlong.github.io.git
+          git push origin HEAD:gh-pages --force

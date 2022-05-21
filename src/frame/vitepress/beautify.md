@@ -95,7 +95,7 @@ onMounted(() => {
 
 创建 `.vitepress/lib/cursor-effects.js` 文件，复制[源码](https://blog-static.cnblogs.com/files/axqa/cursor-effects.js)。
 
-该特效插件使用浏览器 API 创建 DOM，由于 Vitepress 应用程序[浏览器 API 访问限制](/frontend/vitepress/#browser-api-access-restrictions)，在 `mounted` 钩子中动态导入：
+该特效插件使用浏览器 API 创建 DOM，由于 Vitepress 应用程序[浏览器 API 访问限制](/frame/vitepress/#browser-api-access-restrictions)，在 `mounted` 钩子中动态导入：
 
 ```js
 onMounted(() => {
