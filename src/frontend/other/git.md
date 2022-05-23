@@ -2,7 +2,7 @@
 
 ## 基础配置及使用 {#base-git}
 
-```shell
+```sh
 # 设置用户名和邮箱
 git config --global user.name "You Name"
 git config --global user.email email@example.com
@@ -26,7 +26,7 @@ git push origin --delete master
 
 时光不能倒流，但是 git 允许我们改变历史
 
-```shell
+```sh
 git log # 查看git历史，确认commit-id
 git reset --hard commit-id  # 回滚到指定commit-id
 git push origin main -f # 强制推送至远程分支
@@ -34,7 +34,7 @@ git push origin main -f # 强制推送至远程分支
 
 如果只需要回滚到上一次提交，可以使用
 
-```shell
+```sh
 git reset --hard HEAD^
 ```
 
@@ -44,7 +44,7 @@ git reset --hard HEAD^
 
 举个栗子，Git 历史提交记录如下：
 
-```bash
+```sh
 45a4d42 # 第三次提交
 fc09cf9 # 第二次提交
 d14eab1 # 第一次提交
@@ -61,7 +61,7 @@ git commit -m "恢复第二次修改"
 
 此时 Git 提交历史变为：
 
-```bash
+```sh
 9a0d7d5 (HEAD -> master) Revert "恢复第二次修改"
 45a4d42 # 第三次提交
 fc09cf9 # 第二次提交

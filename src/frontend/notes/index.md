@@ -6,7 +6,7 @@
 
 ## CSS scroll-behavior
 
-`scroll-behavior` 是一个 CSS 属性，默认值为 'auto'。写在滚动元素上，可以实现元素的平滑滚动。
+`scroll-behavior` 是一个 CSS 属性，默认值为‘auto’。写在滚动元素上，可以实现元素的平滑滚动。
 
 ```css
 html {

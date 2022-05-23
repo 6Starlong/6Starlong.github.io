@@ -14,7 +14,7 @@ const nav = [
     activeMatch: `^/frontend/`,
     items: [
       { text: '开发笔记', link: '/frontend/notes/' },
-      { text: 'Node', link: '/frontend/nodejs/pnpm' },
+      { text: 'Node', link: '/frontend/nodejs/' },
       { text: '其他', link: '/frontend/other/git.md' }
     ]
   },
@@ -48,7 +48,10 @@ export const sidebar = {
     },
     {
       text: 'Node',
-      items: [{ text: 'pnpm 包管理器', link: '/frontend/nodejs/pnpm' }]
+      items: [
+        { text: '包管理器', link: '/frontend/nodejs/' },
+        { text: 'pnpm 的安装与使用', link: '/frontend/nodejs/pnpm' }
+      ]
     },
     {
       text: '其他',

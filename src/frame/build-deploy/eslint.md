@@ -5,7 +5,7 @@
 Vue 3 项目推荐配置
 
 ```sh
-pnpm add -D eslint eslint-plugin-vue eslint-config-prettier
+> pnpm add -D eslint eslint-plugin-vue eslint-config-prettier
 ```
 
 ```js

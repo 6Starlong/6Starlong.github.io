@@ -52,8 +52,8 @@ vite 项目不支持在 package.json 中配置 gitHooks，vue-cli 项目能支�
 使用 verifyCommit 脚本对提交信息进行规范化校验
 
 ```sh
-mkdir scripts
-echo "" > scripts/verifyCommit.js
+> mkdir scripts
+> echo "" > scripts/verifyCommit.js
 ```
 
 ```json
