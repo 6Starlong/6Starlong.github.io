@@ -1,7 +1,7 @@
 <script setup>
+import ThemeSakura from './ThemeSakura.vue'
 import NavBarTitle from './NavBarTitle.vue'
 import PlayGround from './PlayGround.vue'
-import Sakura from './Sakura.vue'
 
 import { createApp, watch, onMounted } from 'vue'
 import { useData } from 'vitepress'
@@ -72,7 +72,7 @@ onMounted(() => {
     <template #aside-mid> <PlayGround /> </template>
   </Layout>
 
-  <Sakura />
+  <ThemeSakura />
 </template>
 
 <style scoped>

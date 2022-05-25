@@ -1,15 +1,15 @@
 <script setup>
-import Posts from '@theme/components/Posts.vue'
+import ThemePosts from './ThemePosts.vue'
 </script>
 
 <template>
-  <main class="blog-main">
-    <Posts />
+  <main class="blog">
+    <ThemePosts />
   </main>
 </template>
 
 <style scoped>
-.blog-main {
+.blog {
   @apply mx-auto max-w-[960px] py-[50px];
 }
 </style>

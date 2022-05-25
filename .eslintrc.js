@@ -3,7 +3,9 @@ module.exports = {
   env: {
     node: true,
     es2022: true,
-    browser: true
+    browser: true,
+    // vue 3 requires this
+    'vue/setup-compiler-macros': true
   },
   extends: ['plugin:vue/vue3-recommended', 'eslint:recommended', '@vue/eslint-config-prettier'],
   rules: {},

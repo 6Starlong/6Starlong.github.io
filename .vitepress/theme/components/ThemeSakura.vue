@@ -18,7 +18,7 @@ class Sakura {
   }
   draw(cxt) {
     cxt.save()
-    let xc = (40 * this.s) / 4
+    // let xc = (40 * this.s) / 4
     cxt.translate(this.x, this.y)
     cxt.rotate(this.r)
     cxt.drawImage(this.img, 0, 0, 40 * this.s, 40 * this.s)
@@ -69,7 +69,7 @@ class SakuraList {
   }
 }
 export default {
-  name: 'Sakura',
+  name: 'ThemeSakura',
   data() {
     return {
       staticx: false,
@@ -104,7 +104,7 @@ export default {
           break
         case 'fnx':
           random = -0.5 + Math.random() * 1
-          ret = function (x, y) {
+          ret = function (x) {
             return x + 0.5 * random - 1.7
           }
           break
@@ -125,7 +125,7 @@ export default {
     },
     startSakura() {
       let that = this
-      requestAnimationFrame =
+      window.requestAnimationFrame =
         window.requestAnimationFrame ||
         window.mozRequestAnimationFrame ||
         window.webkitRequestAnimationFrame ||

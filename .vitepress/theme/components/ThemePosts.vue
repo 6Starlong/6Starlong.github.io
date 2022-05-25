@@ -28,7 +28,7 @@ function goPosts(item) {
 
 <template>
   <div class="w-full">
-    <div v-for="(item, index) in postsList" :key="index" @click="goPosts(item)" class="posts">
+    <div v-for="(item, index) in postsList" :key="index" class="posts" @click="goPosts(item)">
       <div>{{ item.text }}</div>
       <div class="mt-[20px] flex justify-between">
         <span class="text-xs">
