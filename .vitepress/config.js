@@ -44,7 +44,10 @@ export const sidebar = {
   '/frontend/': [
     {
       text: '开发笔记',
-      items: [{ text: '页面平滑滚动', link: '/frontend/notes/' }]
+      items: [
+        { text: '页面平滑滚动', link: '/frontend/notes/' },
+        { text: 'Lodash', link: '/frontend/notes/lodash' }
+      ]
     },
     {
       text: 'Node',

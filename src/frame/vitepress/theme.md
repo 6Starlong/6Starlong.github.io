@@ -7,7 +7,7 @@
 ## 快速开始 {#quick-start}
 
 ```sh
-> pnpm add @vue/theme
+> npm install @vue/theme
 ```
 
 ```js{6}
