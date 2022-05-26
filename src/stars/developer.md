@@ -20,7 +20,7 @@
 
 ## JavaScript
 
-- [lodash](https://lodash.com/) | [lodash 中文](https://www.lodashjs.com/) | [Github](github.com/lodash/lodash) <br/>
+- [lodash](https://lodash.com/) | [lodash 中文](https://www.lodashjs.com/) | [Github](https://github.com/lodash/lodash) <br/>
   一个 JavaScript 工具库，提供了一些常用的函数。 <br/>
 
 ## CSS
