@@ -52,4 +52,19 @@ function goPosts(item) {
   @apply mb-[40px] p-8 w-full rounded-lg cursor-pointer;
   background-color: var(--vt-c-bg-soft);
 }
+
+button {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: var(--vt-c-text-1);
+  border-bottom: 1px solid var(--vt-c-text-1);
+  transition: color 0.25s, border-color 0.25s;
+}
+
+button:hover {
+  color: var(--vt-c-text-2);
+  border-bottom: 1px solid var(--vt-c-text-2);
+}
 </style>

@@ -30,5 +30,6 @@ const props = defineProps({
 .title {
   font-size: 16px;
   font-weight: 500;
+  color: var(--vt-c-text-1);
 }
 </style>
