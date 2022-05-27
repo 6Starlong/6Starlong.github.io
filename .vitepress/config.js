@@ -151,20 +151,19 @@ export default defineConfig({
         facetFilters: ['version:v3']
       }
     },
-    // 首页链接
-    homeLinks: [
-      { icon: 'github', link: 'https://github.com/6Starlong' },
-      { icon: 'blog', link: '/', default: true }
-    ],
+
     // 社区链接
     socialLinks: [{ icon: 'github', link: 'https://github.com/6Starlong' }],
+
     // 底部信息
     footer: {
       copyright: `Copyright © ${new Date().getFullYear()} - Powered by Sᴛᴀʀʟᴏɴɢ☕`
     }
   },
+
   // markdown插件
   markdown: {},
+
   vite: {
     // 定义 public 目录
     publicDir: path.resolve(__dirname, '../public'),
