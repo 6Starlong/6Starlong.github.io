@@ -6,7 +6,7 @@ import { VTIconMapPin, VTIconMail, VTIconGitHub } from '@vue/theme'
   <div class="About mx-auto container">
     <div class="flex">
       <figure>
-        <img src="/avatar.png" class="h-[80px]" />
+        <img src="/avatar.png" class="h-[80px] rounded-full" />
       </figure>
       <div class="ml-7">
         <div class="mb-2 font-bold text-4xl font-['Quicksand']">Starlong</div>

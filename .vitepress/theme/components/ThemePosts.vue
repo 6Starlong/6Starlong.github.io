@@ -10,7 +10,10 @@ const currPage = ref(1)
 
 watch(currPage, () => {
   postsList.value = filterPosts(currPage.value).posts
-  window.scrollTo(0, window.innerHeight * 0.75 - (window.innerWidth > 960 ? 55 : 0))
+  window.scrollTo(
+    0,
+    window.innerHeight * 0.75 - (window.innerWidth > 960 ? 56 : window.innerWidth > 768 ? 0 : -56)
+  )
 })
 
 onMounted(() => {
@@ -66,5 +69,15 @@ button {
 button:hover {
   color: var(--vt-c-text-2);
   border-bottom: 1px solid var(--vt-c-text-2);
+}
+
+@media (max-width: 960px) {
+  .posts {
+    @apply rounded-none;
+  }
+
+  button {
+    @apply mx-4;
+  }
 }
 </style>
