@@ -10,7 +10,7 @@ const currPage = ref(1)
 
 watch(currPage, () => {
   postsList.value = filterPosts(currPage.value).posts
-  window.scrollTo(0, window.innerHeight - (window.innerWidth > 960 ? 55 : 0))
+  window.scrollTo(0, window.innerHeight * 0.75 - (window.innerWidth > 960 ? 55 : 0))
 })
 
 onMounted(() => {
