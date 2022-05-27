@@ -1,9 +1,8 @@
 <script setup>
 import ThemeSakura from './ThemeSakura.vue'
-import NavBarTitle from './NavBarTitle.vue'
 import PlayGround from './PlayGround.vue'
 
-import { createApp, watch, onMounted } from 'vue'
+import { h, createApp, watch, onMounted } from 'vue'
 import { useData } from 'vitepress'
 import { VPTheme } from '@vue/theme'
 
@@ -14,9 +13,14 @@ onMounted(() => {
   console.log("%cSᴛᴀʀʟᴏɴɢ💫's Blog\n心之所向，素履以往。", 'color:#00a5f2;line-height:24px;')
   console.log('%c用代码表达言语的魅力，\n用代码书写山河的壮丽。', 'color:#00a5f2;line-height:24px;')
 
-  // 挂载 NavBarTitle 组件
-  const app = createApp(NavBarTitle, { logo: theme.value.logo, title: site.value.title })
-  app.mount(document.querySelector('.VPNavBarTitle'))
+  // 挂载 NavBarTitle
+  createApp({
+    render: () =>
+      h('div', { class: 'NavBarTitle' }, [
+        h('img', { src: theme.value.logo, class: 'logo' }),
+        h('span', { class: 'title' }, site.value.title)
+      ])
+  }).mount(document.querySelector('.VPNavBarTitle'))
 
   // 看板娘 初始化
   L2Dwidget.init({
@@ -79,9 +83,33 @@ onMounted(() => {
 .VPApp {
   font-synthesis: weight style small-caps;
 }
+
 .update-time {
   @apply text-right text-sm;
   color: var(--vt-c-green);
   transform: translateY(-2rem);
+}
+</style>
+
+<style>
+.VPNavBarTitle svg.logo,
+.VPNavBarTitle span.text {
+  display: none;
+}
+
+.NavBarTitle {
+  display: flex;
+  align-items: center;
+}
+
+.NavBarTitle img.logo {
+  margin-right: 8px;
+  height: 2rem;
+}
+
+.NavBarTitle span.title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--vt-c-text-1);
 }
 </style>

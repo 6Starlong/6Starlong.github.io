@@ -26,6 +26,13 @@ import { VTIconMapPin, VTIconMail, VTIconGitHub } from '@vue/theme'
       </div>
     </div>
     <img src="./wallhaven.jpg" class="mt-[50px] rounded-lg" style="border-radius: 8px" />
+    <p class="mt-[20px] text-sm">
+      本站基于
+      <a href="https://github.com/vuejs/vitepress" target="_blank">VitePress</a> 和
+      <a href="https://github.com/vuejs/theme/" target="_blank">@vue/theme</a> 建立。网站内容以
+      Markdown 格式书写，位于 src 文件夹中，自定义主题内容查看
+      <a href="/frame/vitepress/theme.html">theme.md</a>
+    </p>
   </div>
 </template>
 

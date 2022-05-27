@@ -7,14 +7,6 @@ const VPNav = ref('')
 const heroHeight = ref(0)
 const scrollTop = ref(0)
 
-watch(scrollTop, (scrollTop) => {
-  if (scrollTop > heroHeight.value) {
-    VPNav.value.classList.remove('nav-cover')
-  } else {
-    VPNav.value.classList.add('nav-cover')
-  }
-})
-
 onMounted(() => {
   VPNav.value = document.querySelector('.VPNav')
   VPNav.value.classList.add('nav-cover')
@@ -22,6 +14,14 @@ onMounted(() => {
 
   window.addEventListener('scroll', () => {
     scrollTop.value = document.documentElement.scrollTop || document.body.scrollTop
+  })
+
+  watch(scrollTop, (scrollTop) => {
+    if (scrollTop > heroHeight.value) {
+      VPNav.value.classList.remove('nav-cover')
+    } else {
+      VPNav.value.classList.add('nav-cover')
+    }
   })
 })
 
