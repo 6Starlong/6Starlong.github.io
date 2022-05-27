@@ -160,7 +160,7 @@ export default defineConfig({
     socialLinks: [{ icon: 'github', link: 'https://github.com/6Starlong' }],
     // 底部信息
     footer: {
-      copyright: `Copyright © ${new Date().getFullYear()}. Powered by Sᴛᴀʀʟᴏɴɢ💫`
+      copyright: `Copyright © ${new Date().getFullYear()} - Powered by Sᴛᴀʀʟᴏɴɢ☕`
     }
   },
   // markdown插件

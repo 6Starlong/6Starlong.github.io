@@ -1,7 +1,7 @@
 ---
 home: true
 page: true
-heroText: My name is Sᴛᴀʀʟᴏɴɢ
+heroText: Sᴛᴀʀʟᴏɴɢ's Blog
 tagline: I'm a Frontend Developer
 ---
 
