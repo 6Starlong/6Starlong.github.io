@@ -31,12 +31,16 @@ function goPosts(item) {
 
 <template>
   <div class="w-full">
+    <!-- TODO:列表卡片样式优化 -->
     <div v-for="(item, index) in postsList" :key="index" class="posts" @click="goPosts(item)">
-      <div>{{ item.text }}</div>
-      <div class="mt-[20px] flex justify-between">
-        <span class="text-xs">
-          {{ item.lastUpdated ? new Date(item.lastUpdated).toLocaleString() : null }}
-        </span>
+      <img v-if="item.img" :src="item.img" class="mr-8 rounded-lg h-[150px]" />
+      <div class="pt-[10px]">
+        <div class="text-xl font-bold">{{ item.text }}</div>
+        <div class="mt-[20px] flex justify-between">
+          <span class="text-lg">
+            {{ item.lastUpdated ? new Date(item.lastUpdated).toLocaleString() : null }}
+          </span>
+        </div>
       </div>
     </div>
     <div class="flex justify-between">
@@ -52,7 +56,7 @@ function goPosts(item) {
 
 <style scoped>
 .posts {
-  @apply mb-[40px] p-8 w-full rounded-lg cursor-pointer;
+  @apply flex mb-[40px] p-8 w-full rounded-lg cursor-pointer;
   background-color: var(--vt-c-bg-soft);
 }
 
