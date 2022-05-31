@@ -19,7 +19,7 @@ export const data = {
   // 可以从 fs 读取并生成数据
   load: async () => {
     // 索引 id
-    let index = 1
+    let index = 0
     // 获取壁纸列表
     const wallhaven = await getWallhaven()
     // 使用基于 git 的 lastUpdated 数据
@@ -30,8 +30,8 @@ export const data = {
           items: await Promise.all(
             group.items.map(async (item) => ({
               ...item,
-              id: index++,
-              img: index - 2 < wallhaven.length ? wallhaven[index - 2].thumbs.small : '',
+              id: ++index,
+              img: index - 1 < wallhaven.length ? wallhaven[index - 1].thumbs.small : '',
               lastUpdated: await getGitTimestamp(pathToFile(item.link))
             }))
           )
