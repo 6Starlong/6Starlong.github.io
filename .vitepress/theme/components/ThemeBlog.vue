@@ -3,13 +3,7 @@ import ThemePosts from './ThemePosts.vue'
 </script>
 
 <template>
-  <main class="blog">
+  <main class="container py-12">
     <ThemePosts />
   </main>
 </template>
-
-<style scoped>
-.blog {
-  @apply mx-auto max-w-[960px] py-[50px];
-}
-</style>

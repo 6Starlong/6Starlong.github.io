@@ -1,7 +1,6 @@
 ---
 title: 关于
-aside: false
-lastUpdated: false
+page: true
 ---
 
 <script setup>

@@ -1,35 +1,13 @@
 /* .vitepress/theme/index.css */
 
-/* tailwindcss */
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
 /* quicksand font */
 @import './fonts.css';
 
-/* iconfont */
-.icon {
-  width: 2.5em;
-  height: 2.5em;
-  vertical-align: -0.15em;
-  fill: currentColor;
-  overflow: hidden;
-}
-
-/* --vt :root */
+/* tailwindcss */
+@tailwind components;
+@tailwind utilities;
 
 /* custom theme style */
-/* 渐变 */
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-
 html {
   /* 页面平滑滚动 */
   scroll-behavior: smooth;
@@ -52,8 +30,14 @@ body::-webkit-scrollbar {
   background: rgba(84, 84, 84, 0.8);
 }
 
-@media screen and (max-width: 1280px) {
-  #live2d-widget {
-    opacity: 0 !important;
+@layer components {
+  .font-quicksand {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-synthesis: weight style small-caps;
+  }
+
+  .blog-title {
+    @apply mt-6 mb-12 text-center text-5xl font-['Georgia'] font-bold underline;
   }
 }

@@ -13,25 +13,14 @@ const playground = [
 
 <template>
   <div class="aside-mid">
-    <div class="mt-12 mb-1 text-[12px] font-bold">在线 Playground</div>
+    <div class="mt-12 mb-1 text-xs font-bold">在线 Playground</div>
     <a
       v-for="(item, index) in playground"
       :key="index"
+      class="block text-[13px] leading-7 text-vt-2 hover:text-vt-1 duration-500"
       :href="item.link"
-      class="block text-[13px] leading-[28px]"
       target="_blank"
       >{{ item.text }}
     </a>
   </div>
 </template>
-
-<style scoped>
-.aside-mid a {
-  color: var(--vt-c-text-2);
-  transition: color 0.25s;
-}
-
-.aside-mid a:hover {
-  color: var(--vt-c-text-1);
-}
-</style>

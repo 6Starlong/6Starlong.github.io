@@ -32,11 +32,11 @@ onUnmounted(() => {
 
 <template>
   <header id="hero">
-    <div class="relative z-10 text-white text-center">
-      <h2 class="text-[2.4em] leading-snug font-bold">{{ frontmatter.heroText }}</h2>
+    <div class="relative z-10 font-quicksand text-center text-white">
+      <h2 class="text-4xl leading-snug">{{ frontmatter.heroText }}</h2>
       <p class="tracking-[3.8px]">{{ frontmatter.tagline }}</p>
-      <p class="text-sm leading-8 tracking-[1px]">☕ This site is built with VitePress 🛠️</p>
-      <p class="my-[10px] leading-3 tracking-[9px]">******</p>
+      <p class="text-sm leading-8 tracking-[1.25px]">☕ This site is built with VitePress 🛠️</p>
+      <p class="my-2 leading-3 tracking-[9px]">******</p>
       <YiYan />
     </div>
   </header>
@@ -44,27 +44,19 @@ onUnmounted(() => {
 
 <style scoped>
 #hero {
-  @apply relative flex justify-center items-center bg-cover bg-center;
-  min-height: 75vh;
-  font-family: 'Quicksand', sans-serif;
-  background-image: url('https://w.wallhaven.cc/full/6o/wallhaven-6ozkzl.jpg');
+  @apply relative min-h-[75vh] grid content-center;
 }
 
 #hero::before {
-  @apply absolute top-0 left-0 w-full h-full;
-  content: '';
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.dark #hero::before {
-  background-color: rgba(26, 26, 26, 0.1);
+  @apply content-[''] absolute inset-0 bg-cover bg-center opacity-90;
+  background-image: url('https://w.wallhaven.cc/full/6o/wallhaven-6ozkzl.jpg');
 }
 </style>
 
 <style>
 @screen md {
   #hero {
-    margin-top: -55px;
+    @apply -mt-[var(--vt-nav-height)];
   }
 
   .nav-cover {

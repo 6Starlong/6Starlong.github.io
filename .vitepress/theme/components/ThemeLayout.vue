@@ -46,14 +46,14 @@ onMounted(() => {
 
     // 动态导入光标点击特效
     import('@/lib/cursor-effects')
-  }
 
-  // 禁用img标签的原生drag功能
-  document.body.addEventListener('dragstart', (e) => {
-    if (e.target.nodeName.toLowerCase() === 'img') {
-      e.preventDefault()
-    }
-  })
+    // 禁用img标签的原生drag功能
+    document.body.addEventListener('dragstart', (e) => {
+      if (e.target.nodeName.toLowerCase() === 'img') {
+        e.preventDefault()
+      }
+    })
+  }
 })
 </script>
 
@@ -70,31 +70,23 @@ onMounted(() => {
     <!-- <template #aside-bottom> Sponsors </template> -->
     <template #content-bottom>
       <div class="content-bottom">
-        <div v-if="page.lastUpdated && frontmatter.lastUpdated !== false" class="update-time">
+        <div
+          v-if="page.lastUpdated && frontmatter.lastUpdated !== false"
+          class="my-4 text-right text-sm text-vt-2"
+        >
           最近更新时间：{{ new Date(page.lastUpdated).toLocaleString() }}
         </div>
-
-        <YiYan />
+        <YiYan class="absolute left-0 right-0 -bottom-20" />
       </div>
     </template>
 
-    <template #aside-mid> <PlayGround /> </template>
+    <template #aside-mid>
+      <PlayGround />
+    </template>
   </Layout>
 
   <ThemeSakura v-if="isDesktop" />
 </template>
-
-<style scoped>
-.VPApp {
-  font-synthesis: weight style small-caps;
-}
-
-.update-time {
-  @apply text-right text-sm;
-  color: var(--vt-c-green);
-  transform: translateY(-2rem);
-}
-</style>
 
 <style>
 .VPNavBarTitle svg.logo,
@@ -110,12 +102,18 @@ onMounted(() => {
 .NavBarTitle img.logo {
   margin-right: 8px;
   height: 2rem;
-  border-radius: 9999px;
+  border-radius: 50%;
 }
 
 .NavBarTitle span.title {
   font-size: 16px;
   font-weight: 500;
   color: var(--vt-c-text-1);
+}
+
+@media screen and (max-width: 1280px) {
+  #live2d-widget {
+    opacity: 0 !important;
+  }
 }
 </style>
