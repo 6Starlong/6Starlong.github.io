@@ -2,7 +2,7 @@ import { data as PostsData } from '@src/posts.data'
 
 // 返回过滤排序后的 PostsData。
 const filterPosts = (page) => {
-  const pageNum = 10
+  const pageNum = 6
   const currPage = page || 1
   let postsList = []
   // 将所有文章放入一个数组

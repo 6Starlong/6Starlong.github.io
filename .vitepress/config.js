@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import { defineConfig } from 'vitepress'
+import { defineConfigWithTheme } from 'vitepress'
 import baseConfig from '@vue/theme/config'
 
 const nav = [
@@ -81,7 +81,6 @@ export const sidebar = {
         { text: '主题美化', link: '/frame/vitepress/beautify' }
       ]
     },
-
     {
       text: '构建部署',
       items: [
@@ -106,7 +105,7 @@ export const sidebar = {
   ]
 }
 
-export default defineConfig({
+export default defineConfigWithTheme({
   extends: baseConfig,
 
   lang: 'zh-CN',
@@ -162,7 +161,9 @@ export default defineConfig({
   },
 
   // markdown插件
-  markdown: {},
+  markdown: {
+    lineNumbers: false
+  },
 
   vite: {
     // 定义 public 目录

@@ -31,7 +31,7 @@ export const data = {
             group.items.map(async (item) => ({
               ...item,
               id: ++index,
-              img: index - 1 < wallhaven.length ? wallhaven[index - 1].thumbs.small : '',
+              img: index - 1 < wallhaven.length ? wallhaven[index - 1].thumbs.large : '',
               lastUpdated: await getGitTimestamp(pathToFile(item.link))
             }))
           )
@@ -79,7 +79,10 @@ async function getWallhaven() {
     const collections = await instance(
       'https://wallhaven.cc/api/v1/collections?apikey=DM2rRaTT3Dg6nUwpapWcEmLsi4Lt4nP2'
     )
-    return await instance(`https://wallhaven.cc/api/v1/collections/starlong/${collections[0].id}`)
+    const wallhaven = await instance(
+      `https://wallhaven.cc/api/v1/collections/starlong/${collections[0].id}`
+    )
+    return wallhaven.sort(() => Math.random() - 0.5) // 随机排序
   } catch (error) {
     console.error(chalk.red(error))
   }
