@@ -71,7 +71,7 @@ function goPosts(item) {
 .posts-card {
   @apply pb-5 overflow-hidden cursor-pointer;
   @apply rounded-lg bg-vt-bg-soft shadow-3;
-  @apply duration-200 hover:translate-y-[-5px];
+  @apply duration-150 hover:translate-y-[-20px];
 }
 
 .posts-card h2 {

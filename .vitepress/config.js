@@ -4,40 +4,45 @@ import { defineConfigWithTheme } from 'vitepress'
 import baseConfig from '@vue/theme/config'
 
 const nav = [
+  { text: 'Home', link: '/', activeMatch: `` },
   {
-    text: '首页',
-    link: '/',
-    activeMatch: ``
-  },
-  {
-    text: '前端',
-    activeMatch: `^/frontend/`,
+    text: 'Blog',
+    activeMatch: `^/frontend|frame|stars/`,
     items: [
-      { text: '开发笔记', link: '/frontend/notes/' },
-      { text: 'Node', link: '/frontend/nodejs/' },
-      { text: '其他', link: '/frontend/other/git.md' }
+      {
+        text: 'Frontend',
+        items: [
+          { text: '开发笔记', link: '/frontend/notes/' },
+          { text: 'Node', link: '/frontend/nodejs/' },
+          { text: '其他', link: '/frontend/other/git.md' }
+        ]
+      },
+      {
+        text: 'Framework',
+        items: [
+          { text: 'Vue', link: '/frame/vuejs/' },
+          { text: 'Vite', link: '/frame/vitejs/' },
+          { text: 'VitePress', link: '/frame/vitepress/' },
+          { text: '构建部署', link: '/frame/build-deploy/' }
+        ]
+      },
+      {
+        text: 'Collect',
+        items: [{ text: 'Stars', link: '/stars/developer' }]
+      }
     ]
   },
   {
-    text: '框架',
-    activeMatch: `^/frame/`,
+    text: 'PlayGround',
     items: [
-      { text: 'Vue', link: '/frame/vuejs/' },
-      { text: 'Vite', link: '/frame/vitejs/' },
-      { text: 'VitePress', link: '/frame/vitepress/' },
-      { text: '构建部署', link: '/frame/build-deploy/' }
+      { text: 'Vue PlayGround', link: 'https://sfc.vuejs.org/' },
+      { text: 'VueUse PlayGround', link: 'https://play.vueuse.org/' },
+      { text: 'Stackblitz', link: 'https://stackblitz.com/' },
+      { text: 'CodeSandbox', link: 'https://codesandbox.io/s/vue-3' },
+      { text: 'Codepen', link: 'https://codepen.io/pen/editor/vue' }
     ]
   },
-  {
-    text: '⭐ Stars',
-    link: '/stars/developer',
-    activeMatch: `^/stars/`
-  },
-  {
-    text: '关于',
-    link: '/about/',
-    activeMatch: `^/about/`
-  }
+  { text: 'About', link: '/about/', activeMatch: `^/about/` }
 ]
 
 export const sidebar = {
@@ -135,7 +140,12 @@ export default defineConfigWithTheme({
     nav,
     sidebar,
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/6Starlong' }],
+    socialLinks: [
+      {
+        icon: 'github',
+        link: 'https://github.com/6Starlong'
+      }
+    ],
 
     footer: {
       copyright: `Copyright © ${new Date().getFullYear()} - Powered by Sᴛᴀʀʟᴏɴɢ☕`

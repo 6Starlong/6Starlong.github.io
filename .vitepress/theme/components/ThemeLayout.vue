@@ -1,6 +1,5 @@
 <script setup>
 import ThemeSakura from './ThemeSakura.vue'
-import PlayGround from './PlayGround.vue'
 
 import { ref, watch, onMounted } from 'vue'
 import { useData } from 'vitepress'
@@ -68,10 +67,6 @@ onMounted(() => {
         </div>
         <YiYan class="absolute left-0 right-0 -bottom-20" />
       </div>
-    </template>
-
-    <template #aside-mid>
-      <PlayGround />
     </template>
   </Layout>
 
