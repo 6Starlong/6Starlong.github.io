@@ -2,7 +2,7 @@
 import ThemeSakura from './ThemeSakura.vue'
 import PlayGround from './PlayGround.vue'
 
-import { h, createApp, ref, watch, onMounted } from 'vue'
+import { ref, watch, onMounted } from 'vue'
 import { useData } from 'vitepress'
 import { VPTheme } from '@vue/theme'
 
@@ -13,15 +13,6 @@ const isDesktop = ref(false)
 onMounted(() => {
   console.log("%cSᴛᴀʀʟᴏɴɢ💫's Blog\n心之所向，素履以往。", 'color:#00a5f2;line-height:24px;')
   console.log('%c用代码表达言语的魅力，\n用代码书写山河的壮丽。', 'color:#00a5f2;line-height:24px;')
-
-  // 挂载 NavBarTitle
-  createApp({
-    render: () =>
-      h('div', { class: 'NavBarTitle' }, [
-        h('img', { src: theme.value.logo, class: 'logo' }),
-        h('span', { class: 'title' }, site.value.title)
-      ])
-  }).mount(document.querySelector('.VPNavBarTitle'))
 
   // 桌面端美化
   isDesktop.value = document.documentElement.classList.value.includes('desktop')
@@ -45,7 +36,7 @@ onMounted(() => {
     })
 
     // 动态导入光标点击特效
-    import('@/lib/cursor-effects')
+    import('@/plugins/cursor-effects')
 
     // 禁用img标签的原生drag功能
     document.body.addEventListener('dragstart', (e) => {
@@ -59,15 +50,14 @@ onMounted(() => {
 
 <template>
   <Layout>
-    <!-- uncomment to test layout slots -->
-    <!-- <template #banner> </template> -->
-    <!-- <template #sidebar-top> hello top </template> -->
-    <!-- <template #sidebar-bottom> hello bottom </template> -->
-    <!-- <template #content-top> Announcement! </template> -->
-    <!-- <template #content-bottom> Some ads </template> -->
-    <!-- <template #aside-top> this could be huge </template> -->
-    <!-- <template #aside-mid> Sponsors </template> -->
-    <!-- <template #aside-bottom> Sponsors </template> -->
+    <!-- view more layout slots -->
+    <!-- https://github.com/vuejs/theme/blob/main/src/vitepress/components/VPApp.vue -->
+
+    <template #navbar-title>
+      <img :src="theme.logo" class="mr-2 max-h-8 rounded-full" />
+      <span class="text-base text-vt-1 font-medium">{{ site.title }}</span>
+    </template>
+
     <template #content-bottom>
       <div class="content-bottom">
         <div
@@ -89,28 +79,6 @@ onMounted(() => {
 </template>
 
 <style>
-.VPNavBarTitle svg.logo,
-.VPNavBarTitle span.text {
-  display: none;
-}
-
-.NavBarTitle {
-  display: flex;
-  align-items: center;
-}
-
-.NavBarTitle img.logo {
-  margin-right: 8px;
-  height: 2rem;
-  border-radius: 50%;
-}
-
-.NavBarTitle span.title {
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--vt-c-text-1);
-}
-
 @media screen and (max-width: 1280px) {
   #live2d-widget {
     opacity: 0 !important;

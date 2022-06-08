@@ -118,20 +118,14 @@ export default defineConfigWithTheme({
   // 从head引入
   head: [
     [
-      'script', // 阿里字体图标 https://www.iconfont.cn/
-      {
-        src: 'https://at.alicdn.com/t/font_2779014_a932u7n2hl.js?spm=a313x.7781069.1998910419.88&file=font_2779014_a932u7n2hl.js'
-      }
-    ],
-    [
       'script', // L2Dwidget https://l2dwidget.js.org/lib/L2Dwidget.min.js
       {},
-      fs.readFileSync(path.resolve(__dirname, './lib/live2d-widget/L2Dwidget.min.js'), 'utf8')
+      fs.readFileSync(path.resolve(__dirname, './plugins/live2d-widget/L2Dwidget.min.js'), 'utf8')
     ],
     [
       'script', // L2Dwidget https://l2dwidget.js.org/lib/L2Dwidget.0.min.js
       {},
-      fs.readFileSync(path.resolve(__dirname, './lib/live2d-widget/L2Dwidget.0.min.js'), 'utf8')
+      fs.readFileSync(path.resolve(__dirname, './plugins/live2d-widget/L2Dwidget.0.min.js'), 'utf8')
     ]
   ],
 
@@ -141,26 +135,13 @@ export default defineConfigWithTheme({
     nav,
     sidebar,
 
-    // algolia 搜索
-    algolia: {
-      indexName: 'vitepress',
-      appId: 'RW1NM5N1BT',
-      apiKey: '09722d8e15c686b4057e13ec2b7b0970',
-      searchParameters: {
-        facetFilters: ['version:v3']
-      }
-    },
-
-    // 社区链接
     socialLinks: [{ icon: 'github', link: 'https://github.com/6Starlong' }],
 
-    // 底部信息
     footer: {
       copyright: `Copyright © ${new Date().getFullYear()} - Powered by Sᴛᴀʀʟᴏɴɢ☕`
     }
   },
 
-  // markdown插件
   markdown: {
     lineNumbers: false
   },
@@ -174,6 +155,13 @@ export default defineConfigWithTheme({
         '@': path.resolve(__dirname, ''), // .vitepress
         '@src': path.resolve(__dirname, '../src')
       }
+    },
+    server: {
+      host: true
     }
+  },
+
+  vue: {
+    reactivityTransform: true
   }
 })
