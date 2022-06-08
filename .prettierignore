@@ -1,3 +1,4 @@
 node_modules
 dist
-.vitepress/lib
+
+.vitepress/plugins/live2d-widget

@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import { copyToClip } from '@/utils'
+import { copyToClip } from '@theme/utils'
 
 const yiyan = ref('')
 

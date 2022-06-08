@@ -1,7 +1,7 @@
 <script setup>
 import { ref, watch, onMounted } from 'vue'
 import { useRouter } from 'vitepress'
-import { filterPosts } from '@/utils'
+import { filterPosts } from '@theme/utils'
 
 const router = useRouter()
 const { pageNum, total, posts } = filterPosts()
@@ -12,7 +12,7 @@ watch(currPage, () => {
   postsList.value = filterPosts(currPage.value).posts
   window.scrollTo(
     0,
-    window.innerHeight * 0.75 - (window.innerWidth > 960 ? 55 : window.innerWidth > 768 ? 0 : -55)
+    window.innerHeight * 0.75 - (window.innerWidth > 960 ? 56 : window.innerWidth > 768 ? 0 : -55)
   )
 })
 
@@ -85,7 +85,7 @@ function goPosts(item) {
 }
 
 button {
-  @apply text-sm text-vt-1 tracking-[2px];
+  @apply text-sm text-vt-1 tracking-[2px] font-black;
   @apply border-b border-solid duration-[250ms];
   @apply hover:text-vt-2 hover:border-b-vt-2;
 }
