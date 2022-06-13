@@ -1,3 +1,30 @@
+## [1.0.6](https://github.com/6Starlong/6Starlong.github.io/compare/v1.0.5...v1.0.6) (2022-06-13)
+
+### Bug Fixes
+
+- eslint 失效修复 ([5d6710e](https://github.com/6Starlong/6Starlong.github.io/commit/5d6710efc6ed8f87561bd8de06522af1948e4f11))
+
+### Features
+
+- 背景樱花特效 ([873f76b](https://github.com/6Starlong/6Starlong.github.io/commit/873f76be0dd2f09c08ff403b9b439bf8de698823))
+- 导入 posts 数据模型 ([57c7449](https://github.com/6Starlong/6Starlong.github.io/commit/57c7449fb9dce76c2543619fe2da47bfbf7b3352))
+- 更新 @vue/theme，使用 navbar-title 插槽 ([820cf95](https://github.com/6Starlong/6Starlong.github.io/commit/820cf952d5ca8bfbb8034c81f801693c01094195))
+- 控制台输出 ([3b8cc03](https://github.com/6Starlong/6Starlong.github.io/commit/3b8cc03f294042ffd695b00af11de97865481a72))
+- 为 PostsData 添加 wallhaven 壁纸数据 ([df0f285](https://github.com/6Starlong/6Starlong.github.io/commit/df0f285d569fdb0cdb12d5237a388d4ee3d339be))
+- 修改 NavBarTitle 渲染方式，about 组件修改 ([26bbaa5](https://github.com/6Starlong/6Starlong.github.io/commit/26bbaa5ad313f88a3385aa1fd9166c6dde96912a))
+- 站点 title 和 nav 修改 ([2b928a4](https://github.com/6Starlong/6Starlong.github.io/commit/2b928a429b46649da727bdd1b22b4c96a9531334))
+- deploy to github pages ([c04a811](https://github.com/6Starlong/6Starlong.github.io/commit/c04a811bc07ec833a0ac0a1a7e9b4b6eb4a92470))
+- hero 和 yiyan 组件优化 ([19811aa](https://github.com/6Starlong/6Starlong.github.io/commit/19811aa05c0bbf9e697d8b9d8510432c812520c4))
+- Posts 组件以及页面的平滑滚动 ([dada6c7](https://github.com/6Starlong/6Starlong.github.io/commit/dada6c7860367f7192a19c2d4051ba4e79436e75))
+- Update theme styles ([cbefed3](https://github.com/6Starlong/6Starlong.github.io/commit/cbefed3eb24b559b73feb76603bcec172ac23aad))
+
+### Performance Improvements
+
+- 基于 tailwind 优化 style ([be859f1](https://github.com/6Starlong/6Starlong.github.io/commit/be859f13388a452af0fd5f9a61a89e646b7cb2a8))
+- 移动端优化 ([55fde7c](https://github.com/6Starlong/6Starlong.github.io/commit/55fde7c37d2f154b72a4d93b09f883de6f853a69))
+- Hero、posts 样式优化 ([7fca67b](https://github.com/6Starlong/6Starlong.github.io/commit/7fca67be05b003e7f245cd9752530ce8417c3338))
+- posts 随机排序 ([acafdc4](https://github.com/6Starlong/6Starlong.github.io/commit/acafdc46818ab5140bd6bd8614f4a240c47ab73a))
+
 ## [1.0.5](https://github.com/6Starlong/6Starlong.github.io/compare/v1.0.4...v1.0.5) (2022-05-15)
 
 ### Bug Fixes
