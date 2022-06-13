@@ -76,7 +76,7 @@ export default {
       stop: null,
       num: 10,
       show: true,
-      zIndex: 1
+      zIndex: 10
     }
   },
   mounted() {

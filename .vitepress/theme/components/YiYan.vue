@@ -25,12 +25,16 @@ onMounted(() => {
 
 <style scoped>
 .app-yiyan {
-  @apply mx-auto max-w-[500px] min-h-[36px] cursor-pointer;
-  @apply text-center text-[13px] leading-4;
+  @apply mx-auto min-h-[36px] cursor-pointer;
+  @apply text-center text-[13px];
+}
+
+.yiyan-text {
+  @apply text-[1em];
 }
 
 .yiyan-from {
-  @apply text-xs opacity-0 duration-300;
+  @apply text-[0.9em] opacity-0 duration-300;
 }
 
 .app-yiyan:hover .yiyan-from {

@@ -4,12 +4,11 @@ page: true
 title: Sᴛᴀʀʟᴏɴɢ's Blog
 titleTemplate: false
 heroText: Sᴛᴀʀʟᴏɴɢ's Blog
-tagline: I'm a Frontend Developer
+tagline: 心之所向 素履以往
 ---
 
 <script setup>
-import ThemeHero from '@theme/components/ThemeHero.vue'
+import ThemeHome from '@theme/components/ThemeHome.vue'
 </script>
 
-<ThemeHero />
-<ThemeBlog />
+<ThemeHome />

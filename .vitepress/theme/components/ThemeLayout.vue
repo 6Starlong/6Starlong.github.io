@@ -7,7 +7,7 @@ import { VPTheme } from '@vue/theme'
 
 const { site, theme, page, frontmatter } = useData()
 const { Layout } = VPTheme
-const isDesktop = ref(false)
+const isDesktop = ref()
 
 onMounted(() => {
   console.log("%cSᴛᴀʀʟᴏɴɢ💫's Blog\n心之所向，素履以往。", 'color:#00a5f2;line-height:24px;')
@@ -36,13 +36,6 @@ onMounted(() => {
 
     // 动态导入光标点击特效
     import('@/plugins/cursor-effects')
-
-    // 禁用img标签的原生drag功能
-    document.body.addEventListener('dragstart', (e) => {
-      if (e.target.nodeName.toLowerCase() === 'img') {
-        e.preventDefault()
-      }
-    })
   }
 })
 </script>
@@ -72,11 +65,3 @@ onMounted(() => {
 
   <ThemeSakura v-if="isDesktop" />
 </template>
-
-<style>
-@media screen and (max-width: 1280px) {
-  #live2d-widget {
-    opacity: 0 !important;
-  }
-}
-</style>

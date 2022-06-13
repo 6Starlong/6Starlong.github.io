@@ -1,41 +1,46 @@
 <script setup>
+import { onMounted, onUnmounted } from 'vue'
 import { VTIconMapPin, VTIconMail } from '@vue/theme'
+import { toggleNavBarClass } from '@theme/utils'
+
+const { openScrollEvent, closeScrollEvent } = toggleNavBarClass()
+
+onMounted(() => {
+  const navbar = document.querySelector('.VPNavBar')
+  openScrollEvent({ element: navbar, className: '!shadow-none', offset: 60 })
+  onUnmounted(() => closeScrollEvent())
+})
 </script>
 
 <template>
-  <div class="container max-w-screen-md min-h-[calc(100vh-123px)] pt-12 pb-24 px-6">
-    <h1 class="blog-title">About</h1>
-    <div class="rounded-xl">
-      <div class="p-6 bg-vt-bg-soft rounded-lg shadow-lg">
-        <div class="flex flex-wrap py-4">
-          <img src="/avatar.png" class="mr-8 h-24 rounded-full shadow-sm" />
-          <div class="py-3">
-            <div class="mb-2 text-xl font-quicksand">Sᴛᴀʀʟᴏɴɢ💫</div>
-            <div class="text-sm">
-              <section class="mb-1 flex items-center">
-                <VTIconMapPin class="mr-2 w-4 h-4 fill-current" />
-                <span>Kunming，China</span>
-              </section>
-              <section class="flex items-center">
-                <VTIconMail class="mr-2 w-4 h-4 fill-current" />
-                <span>starlong.lu@gmail.com</span>
-              </section>
-            </div>
+  <div class="min-h-[calc(100vh-130px)]">
+    <div class="my-2 px-2 w-full h-[380px]">
+      <img src="./wallhaven.jpg" class="w-full h-full rounded-lg object-cover object-[0_25%]" />
+    </div>
+    <div class="-mt-16 relative container">
+      <div class="flex flex-col items-center bg-vt rounded-xl shadow-lg">
+        <img src="/avatar.png" class="max-w-[160px] translate-y-[-80px] rounded-full shadow-md" />
+        <div class="translate-y-[-80px] text-center text-vt-2 font-bold duration-200">
+          <h3 class="mt-8 mb-6 text-4xl font-Roboto-Slab">Sᴛᴀʀʟᴏɴɢ</h3>
+          <h6 class="my-2 text-sm font-Roboto">Frontend Developer</h6>
+          <div class="inline-block my-8 mx-auto text-sm font-Roboto">
+            <section class="flex items-center">
+              <VTIconMapPin class="mr-2 w-4 h-4 fill-current" />
+              <span>Kunming，China</span>
+            </section>
+            <section class="flex items-center">
+              <VTIconMail class="mr-2 w-4 h-4 fill-current" />
+              <span>starlong.lu@gmail.com</span>
+            </section>
           </div>
+          <hr />
+          <p class="vt-doc my-1 text-sm">
+            ☕ This site is built with
+            <a href="https://github.com/vuejs/vitepress" target="_blank">VitePress</a> &
+            <a href="https://github.com/vuejs/theme/" target="_blank">@vue/theme</a>
+            🛠️
+          </p>
         </div>
-
-        <div class="relative">
-          <img src="./wallhaven.jpg" class="rounded-lg shadow-sm" />
-          <YiYan class="absolute right-0 bottom-0 text-white" />
-        </div>
-
-        <p class="vt-doc my-5 text-sm">
-          本站基于
-          <a href="https://github.com/vuejs/vitepress" target="_blank">VitePress</a> 和
-          <a href="https://github.com/vuejs/theme/" target="_blank">@vue/theme</a> 建立。网站内容以
-          Markdown 格式书写，位于 src 文件夹中，自定义主题内容查看
-          <a href="/frame/vitepress/theme.html">theme.md</a>
-        </p>
       </div>
     </div>
   </div>

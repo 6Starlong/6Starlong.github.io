@@ -1,9 +1,9 @@
 <script setup>
+import ThemeHero from './ThemeHero.vue'
 import ThemePosts from './ThemePosts.vue'
 </script>
 
 <template>
-  <main class="container pt-24 pb-12">
-    <ThemePosts />
-  </main>
+  <ThemeHero />
+  <ThemePosts />
 </template>
